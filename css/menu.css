@@ -23,6 +23,10 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 18px;
     z-index: 1000;
+    transition: top 0.35s ease, left 0.35s ease, transform 0.35s ease, width 0.35s ease, max-width 0.35s ease, padding 0.35s ease, border-radius 0.35s ease, background 0.35s ease, box-shadow 0.35s ease, border 0.35s ease;
+}
+
+.logo {
     transition: all 0.35s ease;
 }
 
@@ -32,11 +36,13 @@ body {
     font-size: 1.4rem;
     font-weight: bold;
     letter-spacing: 1px;
+    transition: all 0.35s ease;
 }
 
 .nav-links {
     display: flex;
     gap: 25px;
+    transition: gap 0.35s ease;
 }
 
 .nav-links a {
@@ -45,7 +51,7 @@ body {
     font-weight: 500;
     padding: 10px 18px;
     border-radius: 10px;
-    transition: 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .nav-links a:hover {
@@ -59,7 +65,50 @@ body {
     box-shadow: 0 0 20px rgba(37, 99, 235, 0.5);
 }
 
+
+/* ==========================
+   NAVBAR COLAPSADA
+========================== */
+
+.navbar.scrolled {
+    top: 8px;
+    left: 123px;
+    transform: translateX(0);
+    width: auto;
+    max-width: none;
+    padding: 8px 18px;
+    justify-content: center;
+    background: rgba(15, 23, 42, 0.95);
+    border: 1px solid rgba(96, 165, 250, 0.25);
+    border-radius: 999px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.navbar.scrolled .logo {
+    width: 0;
+    opacity: 0;
+    overflow: hidden;
+    margin: 0;
+}
+
+.navbar.scrolled .nav-links {
+    gap: 8px;
+}
+
+.navbar.scrolled .nav-links a {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+}
+
+
+/* ==========================
+   RESPONSIVO
+========================== */
+
 @media (max-width: 768px) {
+    body {
+        padding-top: 180px;
+    }
     .navbar {
         flex-direction: column;
         gap: 15px;
@@ -71,24 +120,12 @@ body {
     .nav-links a {
         text-align: center;
     }
-}
-
-
-/* Efeito colapsar ao fazer scroll */
-
-.navbar.scrolled {
-    padding: 8px 22px;
-    max-width: 760px;
-    border-radius: 999px;
-    background: rgba(15, 23, 42, 0.85);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
-}
-
-.navbar.scrolled .logo a {
-    font-size: 1.1rem;
-}
-
-.navbar.scrolled .nav-links a {
-    padding: 7px 13px;
-    font-size: 0.9rem;
+    .navbar.scrolled {
+        width: 90%;
+        padding: 12px;
+        border-radius: 18px;
+    }
+    .navbar.scrolled .logo {
+        display: none;
+    }
 }
