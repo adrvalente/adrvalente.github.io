@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Projetos | adrvalente</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/projetos.css">
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="cv.html">adrvalente</a>
+        </div>
+
+        <div class="nav-links">
+            <a href="cv.html">
+            👨‍💻 Sobre Mim
+        </a>
+
+            <a href="projetos.html" class="active">
+            🚀 Projetos
+        </a>
+
+            <a href="badges.html">
+            🏆 Certificados
+        </a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Projetos</h1>
+        <p>Projetos académicos, pessoais e técnicos do meu percurso em IT, QA e Programação.</p>
+    </header>
+
+    <main class="container">
+
+        <section class="timeline-wrapper">
+            <div class="carousel-hint left">◀</div>
+            <div class="carousel-hint right">▶</div>
+
+            <div class="timeline-carousel">
+
+                <div class="timeline-line"></div>
+
+                <div class="timeline-card" onclick="openModal(
+                    'Hotel Python Palace',
+                    'Sistema de gestão hoteleira desenvolvido em Flask e SQLite, com gestão de quartos, clientes, reservas, faturas e calendário.',
+                    'projetos/hotel_python_palace.png',
+                    'Python · Flask · SQLite · HTML · CSS',
+                    '#'
+                )">
+                    <span class="timeline-dot">
+                        <span class="timeline-label">Flask · SQLite</span>
+                    </span>
+                    <img src="projetos/hotel_python_palace.png" alt="Projeto Hotel Python Palace">
+                    <h3>Hotel Python Palace</h3>
+                </div>
+
+                <div class="timeline-card" onclick="openModal(
+                    'Dashboard Java Swing',
+                    'Aplicação desktop em Java Swing ligada à base de dados SQLite do Hotel Python Palace, permitindo gerir quartos, clientes e reservas.',
+                    'projetos/java_swing_dashboard.png',
+                    'Java · Swing · SQLite',
+                    '#'
+                )">
+                    <span class="timeline-dot">
+                        <span class="timeline-label">Java · Desktop</span>
+                    </span>
+                    <img src="projetos/java_swing_dashboard.png" alt="Projeto Java Swing Dashboard">
+                    <h3>Dashboard Java Swing</h3>
+                </div>
+
+                <div class="timeline-card" onclick="openModal(
+                    'ETL de Faturas',
+                    'Projeto de extração, transformação e carregamento de dados a partir de faturas PDF, com armazenamento em MariaDB e dashboard em Streamlit.',
+                    'projetos/etl_faturas.png',
+                    'Python · MariaDB · Streamlit · ETL',
+                    '#'
+                )">
+                    <span class="timeline-dot">
+                        <span class="timeline-label">Python · ETL</span>
+                    </span>
+                    <img src="projetos/etl_faturas.png" alt="Projeto ETL de Faturas">
+                    <h3>ETL de Faturas</h3>
+                </div>
+
+                <div class="timeline-card" onclick="openModal(
+                    'Gestão de Restaurante',
+                    'Projeto académico de modelação de base de dados relacional para gestão de mesas, clientes, pedidos, ementas e produtos alimentares.',
+                    'projetos/restaurante_bd.png',
+                    'SQL · Modelo EA · Bases de Dados',
+                    '#'
+                )">
+                    <span class="timeline-dot">
+                        <span class="timeline-label">SQL · BD</span>
+                    </span>
+                    <img src="projetos/restaurante_bd.png" alt="Projeto Gestão de Restaurante">
+                    <h3>Gestão de Restaurante</h3>
+                </div>
+
+                <div class="timeline-card" onclick="openModal(
+                    'Projetos OpenSCAD',
+                    'Modelos 3D paramétricos desenvolvidos em OpenSCAD, incluindo anilhas, placas personalizadas e objetos para impressão 3D.',
+                    'projetos/openscad_3d.png',
+                    'OpenSCAD · Impressão 3D',
+                    '#'
+                )">
+                    <span class="timeline-dot">
+                        <span class="timeline-label">OpenSCAD · 3D</span>
+                    </span>
+                    <img src="projetos/openscad_3d.png" alt="Projetos OpenSCAD">
+                    <h3>Projetos OpenSCAD</h3>
+                </div>
+
+                <div class="timeline-card" onclick="openModal(
+                    'Website Portfólio GitHub',
+                    'Página pessoal desenvolvida para GitHub Pages, com apresentação do perfil, projetos, badges e certificados.',
+                    'projetos/github_portfolio.png',
+                    'HTML · CSS · GitHub Pages',
+                    '#'
+                )">
+                    <span class="timeline-dot">
+                        <span class="timeline-label">GitHub Pages</span>
+                    </span>
+                    <img src="projetos/github_portfolio.png" alt="Website Portfólio GitHub">
+                    <h3>Portfólio GitHub</h3>
+                </div>
+
+                <div class="timeline-card" onclick="openModal(
+                    'Página de Badges',
+                    'Página em formato timeline horizontal para apresentação de badges, certificados e formações concluídas.',
+                    'projetos/badges_page.png',
+                    'HTML · CSS · JavaScript',
+                    '#'
+                )">
+                    <span class="timeline-dot">
+                        <span class="timeline-label">HTML · CSS · JS</span>
+                    </span>
+                    <img src="projetos/badges_page.png" alt="Página de Badges">
+                    <h3>Página de Badges</h3>
+                </div>
+
+                <div class="timeline-card" onclick="openModal(
+                    'Projetos Académicos CET',
+                    'Conjunto de exercícios e projetos desenvolvidos durante o CET em Tecnologias e Programação de Sistemas de Informação.',
+                    'projetos/cet_projetos.png',
+                    'C · Java · Python · SQL',
+                    '#'
+                )">
+                    <span class="timeline-dot">
+                        <span class="timeline-label">CET · IEFP</span>
+                    </span>
+                    <img src="projetos/cet_projetos.png" alt="Projetos Académicos CET">
+                    <h3>Projetos Académicos CET</h3>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        © 2026 adrvalente · GitHub Portfolio
+    </footer>
+
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+
+            <img id="modalImg" src="" alt="Projeto selecionado">
+            <h2 id="modalTitle"></h2>
+            <p id="modalDesc"></p>
+
+            <div id="modalTech" class="modal-tech"></div>
+
+            <a id="modalLink" href="#" target="_blank">Ver projeto</a>
+        </div>
+    </div>
+
+    <script>
+        function openModal(title, desc, img, tech, link) {
+            document.getElementById("modalTitle").innerText = title;
+            document.getElementById("modalDesc").innerText = desc;
+            document.getElementById("modalImg").src = img;
+            document.getElementById("modalTech").innerText = tech;
+            document.getElementById("modalLink").href = link;
+            document.getElementById("projectModal").style.display = "flex";
+        }
+
+        function closeModal() {
+            document.getElementById("projectModal").style.display = "none";
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const modal = document.getElementById("projectModal");
+            const carousel = document.querySelector(".timeline-carousel");
+
+            modal.addEventListener("click", function(event) {
+                if (event.target === modal) {
+                    closeModal();
+                }
+            });
+
+            if (!carousel) return;
+
+            let animationFrame;
+            let scrollSpeed = 0;
+
+            function autoScroll() {
+                if (scrollSpeed !== 0) {
+                    carousel.scrollLeft += scrollSpeed;
+                    animationFrame = requestAnimationFrame(autoScroll);
+                }
+            }
+
+            function stopScroll() {
+                scrollSpeed = 0;
+                cancelAnimationFrame(animationFrame);
+            }
+
+            carousel.addEventListener("mousemove", function(event) {
+                const rect = carousel.getBoundingClientRect();
+                const mouseX = event.clientX - rect.left;
+
+                const edgeZone = 250;
+                const maxSpeed = 12;
+
+                if (mouseX < edgeZone) {
+                    scrollSpeed = -maxSpeed;
+                } else if (mouseX > rect.width - edgeZone) {
+                    scrollSpeed = maxSpeed;
+                } else {
+                    stopScroll();
+                    return;
+                }
+
+                cancelAnimationFrame(animationFrame);
+                animationFrame = requestAnimationFrame(autoScroll);
+            });
+
+            carousel.addEventListener("mouseleave", stopScroll);
+        });
+    </script>
+
+</body>
+
+</html>
