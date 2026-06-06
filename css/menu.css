@@ -66,3 +66,27 @@
         text-align: center;
     }
 }
+
+
+/* Efeito colapsar ao fazer scroll */
+
+.navbar {
+    transition: all 0.35s ease;
+}
+
+.navbar.scrolled {
+    padding: 8px 22px;
+    max-width: 760px;
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.85);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+}
+
+.navbar.scrolled .logo a {
+    font-size: 1.1rem;
+}
+
+.navbar.scrolled .nav-links a {
+    padding: 7px 13px;
+    font-size: 0.9rem;
+}
