@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <title>adrianovalente.pt | Contactos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">adrianovalente.pt</a>
+        </div>
+
+        <div class="nav-links">
+            <a href="cv.html">
+            👨‍💻 Sobre Mim
+        </a>
+
+            <a href="projetos.html">
+            🚀 Projetos
+        </a>
+
+            <a href="badges.html">
+            🏆 Certificados
+        </a>
+
+            <a href="contacto.html" class="active">
+            📞 Contactos
+        </a>
+        </div>
+    </nav>
+
+    <header class="hero">
+
+        <button class="lang-btn" onclick="toggleLanguage()">
+            PT / EN
+        </button>
+
+        <h1 data-pt="Vamos falar?" data-en="Let's talk?">
+            Vamos falar?
+        </h1>
+
+        <p data-pt="Se quiseres entrar em contacto comigo, enviar uma proposta, colaborar num projeto ou simplesmente deixar uma mensagem, usa o formulário abaixo." data-en="If you want to contact me, send a proposal, collaborate on a project or simply leave a message, use the form below.">
+            Se quiseres entrar em contacto comigo, enviar uma proposta, colaborar num projeto ou simplesmente deixar uma mensagem, usa o formulário abaixo.
+        </p>
+    </header>
+
+    <main class="contact-container">
+
+        <section class="contact-grid">
+
+            <div class="info-card">
+                <h2 data-pt="Informação de contacto" data-en="Contact information">
+                    Informação de contacto
+                </h2>
+
+                <p data-pt="Estou disponível para novos desafios, projetos técnicos, colaborações e oportunidades na área de IT, QA e programação." data-en="I am available for new challenges, technical projects, collaborations and opportunities in IT, QA and programming.">
+                    Estou disponível para novos desafios, projetos técnicos, colaborações e oportunidades na área de IT, QA e programação.
+                </p>
+
+                <div class="contact-links">
+                    <a href="https://github.com/adrvalente" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+                    <a href="mailto:teuemail@email.com">Email</a>
+                </div>
+            </div>
+
+            <div class="form-card">
+                <h2 data-pt="Envia uma mensagem" data-en="Send a message">
+                    Envia uma mensagem
+                </h2>
+
+                <div class="typeform-wrapper">
+                    <div data-tf-live="01KTHC0ZB73TNBDAFJAAT6YGFP"></div>
+                    <script src="//embed.typeform.com/next/embed.js"></script>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script>
+        let currentLang = "pt";
+
+        function toggleLanguage() {
+            currentLang = currentLang === "pt" ? "en" : "pt";
+
+            document.querySelectorAll("[data-pt]").forEach(element => {
+                element.textContent = element.getAttribute(`data-${currentLang}`);
+            });
+        }
+
+        window.addEventListener("scroll", () => {
+            const navbar = document.querySelector(".navbar");
+
+            if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

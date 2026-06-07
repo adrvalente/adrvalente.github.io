@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: radial-gradient(circle at top left, rgba(96, 165, 250, 0.18), transparent 35%), radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.12), transparent 35%), #0f172a;
+    color: #e5e7eb;
+}
+
+
+/* ==========================
+   BOTÕES
+========================== */
+
+.download-btn,
+.lang-btn {
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: #e0f2fe;
+    background: rgba(14, 165, 233, 0.15);
+    border: 1px solid rgba(56, 189, 248, 0.6);
+    box-shadow: 0 0 18px rgba(56, 189, 248, 0.45);
+    backdrop-filter: blur(12px);
+    transition: all 0.3s ease;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 13px 28px;
+    border-radius: 999px;
+    font-weight: bold;
+}
+
+.lang-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 9px 16px;
+    border-radius: 999px;
+}
+
+.download-btn:hover,
+.lang-btn:hover {
+    transform: translateY(-3px);
+    background: rgba(14, 165, 233, 0.3);
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.8), 0 0 55px rgba(37, 99, 235, 0.5);
+}
+
+
+/* ==========================
+   HERO
+========================== */
+
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 145px 20px 45px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 8px 18px;
+    margin-bottom: 18px;
+    border-radius: 999px;
+    background: rgba(96, 165, 250, .14);
+    color: #93c5fd;
+    border: 1px solid rgba(96, 165, 250, .35);
+    font-size: .85rem;
+}
+
+.hero h1 {
+    font-size: clamp(2.3rem, 6vw, 4.5rem);
+    color: #ffffff;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    max-width: 760px;
+    margin: 0 0 25px;
+    color: #cbd5e1;
+    font-size: 1.1rem;
+}
+
+
+/* ==========================
+   CONTACTOS
+========================== */
+
+.contact-container {
+    width: 90%;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 30px 0 90px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 28px;
+}
+
+.info-card,
+.form-card {
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .14);
+    border-radius: 26px;
+    padding: 32px;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 22px 60px rgba(0, 0, 0, .35);
+    transition: .3s ease;
+}
+
+.info-card:hover,
+.form-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(96, 165, 250, .45);
+    box-shadow: 0 26px 70px rgba(0, 0, 0, .45);
+}
+
+.info-card h2,
+.form-card h2 {
+    color: #ffffff;
+    margin-bottom: 18px;
+    font-size: 1.6rem;
+}
+
+.info-card p {
+    color: #cbd5e1;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.contact-links a {
+    display: block;
+    padding: 14px 18px;
+    border-radius: 16px;
+    color: #e5e7eb;
+    text-decoration: none;
+    background: rgba(15, 23, 42, .65);
+    border: 1px solid rgba(255, 255, 255, .12);
+    transition: .25s ease;
+}
+
+.contact-links a:hover {
+    color: #ffffff;
+    border-color: rgba(96, 165, 250, .55);
+    background: rgba(96, 165, 250, .18);
+    box-shadow: 0 0 22px rgba(96, 165, 250, .25);
+}
+
+.typeform-wrapper {
+    width: 100%;
+    min-height: 520px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: rgba(15, 23, 42, .65);
+    border: 1px solid rgba(255, 255, 255, .1);
+}
+
+
+/* ==========================
+   RESPONSIVO
+========================== */
+
+@media (max-width: 850px) {
+    .navbar {
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+    }
+    .navbar.scrolled {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 92%;
+    }
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+    }
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero {
+        padding-top: 175px;
+    }
+}
+
+@media (max-width: 500px) {
+    .info-card,
+    .form-card {
+        padding: 24px;
+    }
+    .typeform-wrapper {
+        min-height: 600px;
+    }
+}
