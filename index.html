@@ -18,10 +18,14 @@
 
         <img src="https://avatars.githubusercontent.com/u/286309621?v=4" alt="Foto de perfil Adriano Valente" class="profile-img">
 
-        <h1>Adriano Valente</h1>
+        <h1 data-pt="Adriano Valente" data-en="Adriano Valente">Adriano Valente</h1>
 
-        <p>
-            Website em construção.<br> Novos projetos e conteúdos em breve.
+        <p data-pt="Website em construção." data-en="Website under construction.">
+            Website em construção.
+        </p>
+
+        <p data-pt="Novos projetos e conteúdos em breve." data-en="New projects and content coming soon.">
+            Novos projetos e conteúdos em breve.
         </p>
 
         <!--Botões de navegação para as páginas de CV, Projetos e Badges. Removidos temporariamente para destacar o status atual do site.
@@ -34,12 +38,22 @@
 
         <a href="cv.html" class="status-btn" title="Ver CV">
             <span class="dot"></span>
-            <span>Welcome</span>
+            <span data-pt="Bem-vindo" data-en="Welcome">Bem-vindo</span>
             <span class="arrow">→</span>
         </a>
 
     </main>
 
+    <script>
+        const userLang = navigator.language || navigator.userLanguage;
+        const lang = userLang.startsWith("pt") ? "pt" : "en";
+
+        document.querySelectorAll("[data-pt][data-en]").forEach(element => {
+            element.textContent = element.dataset[lang];
+        });
+
+        document.documentElement.lang = lang === "pt" ? "pt-PT" : "en";
+    </script>
 </body>
 
 </html>
