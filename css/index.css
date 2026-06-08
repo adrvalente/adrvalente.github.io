@@ -128,8 +128,8 @@ p {
     height: 13px;
     flex: 0 0 13px;
     border-radius: 50%;
-    background: #facc15;
-    box-shadow: 0 0 10px #facc15, 0 0 24px rgba(250, 204, 21, 0.95);
+    background: #15fa15;
+    box-shadow: 0 0 10px #15fa20, 0 0 24px rgba(21, 250, 71, 0.95);
     animation: dotPulse 2s infinite;
 }
 
