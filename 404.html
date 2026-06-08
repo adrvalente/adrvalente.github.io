@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <title>404 | Página não encontrada</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/404.css">
+</head>
+
+<body>
+
+
+    <main class="error-container">
+
+        <div class="error-card">
+
+            <span class="error-code">404</span>
+
+            <h1>Página não encontrada</h1>
+
+            <p>
+                A página que procuras pode ter sido movida, removida ou nunca existiu.
+            </p>
+
+            <div class="buttons">
+
+                <button onclick="goBack()" class="btn-secondary">
+                    ↩️ Voltar Atrás
+                </button>
+
+                <script>
+                    function goBack() {
+                        if (window.history.length > 1) {
+                            window.history.back();
+                        } else {
+                            window.location.href = "index.html";
+                        }
+                    }
+                </script>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>

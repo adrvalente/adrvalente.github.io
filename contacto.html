@@ -11,42 +11,13 @@
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="logo">
-            <a href="index.html">adrianovalente.pt</a>
-        </div>
-
-        <div class="nav-links">
-            <a href="cv.html">
-                <span class="nav-icon">👨‍💻</span>
-                <span class="nav-text">Sobre Mim</span>
-            </a>
-
-            <a href="projetos.html">
-                <span class="nav-icon">🚀</span>
-                <span class="nav-text">Projetos</span>
-            </a>
-
-            <a href="badges.html">
-                <span class="nav-icon">🏆</span>
-                <span class="nav-text">Certificados</span>
-            </a>
-
-            <a href="contacto.html" class="active">
-                <span class="nav-icon">📞</span>
-                <span class="nav-text">Contactos</span>
-            </a>
-        </div>
-    </nav>
+    <div id="navbar"></div>
 
     <header class="hero">
 
-        <button class="lang-btn" onclick="toggleLanguage()">
-            PT / EN
-        </button>
 
-        <h1 data-pt="Vamos falar?" data-en="Let's talk?">
-            Vamos falar?
+        <h1 data-pt="👋🏻 Vamos falar?" data-en="👋🏻 Let's talk?">
+            👋🏻 Vamos falar?
         </h1>
 
         <p data-pt="Se quiseres entrar em contacto comigo, enviar uma proposta, colaborar num projeto ou simplesmente deixar uma mensagem, usa o formulário abaixo." data-en="If you want to contact me, send a proposal, collaborate on a project or simply leave a message, use the form below.">
@@ -147,6 +118,10 @@
 
     </main>
 
+    <footer>
+        © 2026 adrvalente · GitHub Portfolio
+    </footer>
+
     <script>
         let currentLang = "pt";
 
@@ -168,6 +143,8 @@
             }
         });
     </script>
+    <script src="js/navbar.js"></script>
+    <script src="js/language.js"></script>
 
 </body>
 

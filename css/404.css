@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0f172a;
+    color: #e5e7eb;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+/* ==========================
+   CONTAINER
+========================== */
+
+.error-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 20px 40px;
+}
+
+
+/* ==========================
+   CARD
+========================== */
+
+.error-card {
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+    background: rgba(255, 255, 255, .06);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, .1);
+    border-radius: 24px;
+    padding: 60px 40px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .25), 0 0 40px rgba(59, 130, 246, .15);
+}
+
+.error-card::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 24px;
+    background: radial-gradient( circle at center, rgba(59, 130, 246, .25), transparent 70%);
+    z-index: -1;
+}
+
+.error-code {
+    display: block;
+    font-size: 8rem;
+    font-weight: 800;
+    background: linear-gradient( 135deg, #60a5fa, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+.error-card h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.error-card p {
+    color: #94a3b8;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    margin-bottom: 35px;
+}
+
+
+/* ==========================
+   BOTÕES
+========================== */
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: .3s ease;
+}
+
+.btn-primary {
+    background: #2563eb;
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px rgba(37, 99, 235, .5);
+}
+
+.btn-secondary {
+    border: 1px solid rgba(255, 255, 255, .15);
+    color: #e5e7eb;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, .08);
+    transform: translateY(-3px);
+}
+
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 768px) {
+    .error-code {
+        font-size: 5rem;
+    }
+    .error-card h1 {
+        font-size: 2rem;
+    }
+    .error-card {
+        padding: 40px 25px;
+    }
+}
+
+.btn-secondary {
+    border: 1px solid rgba(255, 255, 255, .15);
+    color: #e5e7eb;
+    background: transparent;
+    cursor: pointer;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: .3s ease;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, .08);
+    transform: translateY(-3px);
+}

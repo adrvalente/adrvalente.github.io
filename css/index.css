@@ -15,6 +15,12 @@ body {
     overflow: hidden;
 }
 
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #64748b;
+}
+
 .background {
     position: absolute;
     width: 320px;

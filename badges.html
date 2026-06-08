@@ -3,263 +3,328 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>adrianovalente.pt | Badges e Certificados</title>
+
+    <title data-pt="Badges e Certificados | adrvalente" data-en="Badges and Certificates | adrvalente">
+        Badges e Certificados | adrvalente
+    </title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/badges.css">
     <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/badges.css">
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="logo">
-            <a href="index.html">adrianovalente.pt</a>
-        </div>
 
-        <div class="nav-links">
-            <a href="cv.html">
-                <span class="nav-icon">👨‍💻</span>
-                <span class="nav-text">Sobre Mim</span>
-            </a>
-
-            <a href="projetos.html">
-                <span class="nav-icon">🚀</span>
-                <span class="nav-text">Projetos</span>
-            </a>
-
-            <a href="badges.html" class="active">
-                <span class="nav-icon">🏆</span>
-                <span class="nav-text">Certificados</span>
-            </a>
-
-            <a href="contacto.html">
-                <span class="nav-icon">📞</span>
-                <span class="nav-text">Contactos</span>
-            </a>
-        </div>
-    </nav>
+    <div id="navbar"></div>
 
     <header>
-        <h1>Badges e Certificados</h1>
-        <p>Formações, conquistas e certificações do meu percurso em IT, QA e Programação.</p>
+        <h1 data-pt="Badges e Certificados" data-en="Badges and Certificates">
+            Badges e Certificados
+        </h1>
+
+        <p data-pt="Formações, conquistas e certificações do meu percurso em IT, QA e Programação." data-en="Training, achievements and certifications from my journey in IT, QA and Software Development.">
+            Formações, conquistas e certificações do meu percurso em IT, QA e Programação.
+        </p>
     </header>
 
     <main class="container">
 
         <section class="timeline-wrapper">
+
             <div class="carousel-hint left">◀</div>
             <div class="carousel-hint right">▶</div>
 
             <div class="timeline-carousel">
 
-                <div class="timeline-line"></div>
+                <div class="timeline-track">
 
-                <div class="timeline-card" onclick="openModal('Quality Tester', 'breve descrição', 'badges/00_quality_tester.png', 'certificados/')">
-                    <span class="timeline-dot">
-                        <span class="timeline-label">Rumos · 2022</span>
-                    </span>
-                    <img src="badges/00_quality_tester.png" alt="Badge Quality Tester">
-                    <h3>Quality Tester</h3>
-                </div>
+                    <div class="timeline-card" onclick="openBadgeModal(this)" data-img="badges/00_quality_tester.png" data-link="certificados/" data-title-pt="Tester de Qualidade" data-title-en="Quality Tester" data-desc-pt="Introdução aos princípios fundamentais de Quality Assurance e testes de software, incluindo planeamento, execução e reporte de testes."
+                        data-desc-en="Introduction to Quality Assurance and software testing fundamentals, including test planning, execution and reporting.">
 
-                <div class="timeline-card" onclick="openModal('Types and Technical Testing', 'breve descrição', 'badges/01_types_technical_testing.png', 'certificados/')">
-                    <span class="timeline-dot">
-                    <span class="timeline-label">Rumos · 2022</span>
-                    </span>
-                    <img src="badges/01_types_technical_testing.png" alt="Badge Types and Technical Testing">
-                    <h3>Types and Technical Testing</h3>
-                </div>
+                        <span class="timeline-dot">
+                            <span class="timeline-label" data-pt="CertiProf · QA" data-en="CertiProf · QA">CertiProf · QA</span>
+                        </span>
 
-                <div class="timeline-card" onclick="openModal('Fundamental OOP for Test Analysts', 'breve descrição', 'badges/02_fundamental_OOP_test_analysts.png', 'certificados/')">
-                    <span class="timeline-dot">
-                    <span class="timeline-label">Rumos · 2022</span>
-                    </span>
-                    <img src="badges/02_fundamental_OOP_test_analysts.png" alt="Badge Testing OOP">
-                    <h3>Fundamental OOP for Test Analysts</h3>
-                </div>
+                        <img src="badges/00_quality_tester.png" alt="Badge Quality Tester">
+                        <h3 data-pt="Tester de Qualidade" data-en="Quality Tester">Tester de Qualidade</h3>
+                    </div>
 
-                <div class="timeline-card" onclick="openModal('Tester Skills', 'breve descrição', 'badges/03_tester_skills.png', 'certificados/')">
-                    <span class="timeline-dot">
-                    <span class="timeline-label">Rumos · 2022</span>
-                    </span>
-                    <img src="badges/03_tester_skills.png" alt="Badge Tester Skills">
-                    <h3>Tester Skills</h3>
-                </div>
+                    <div class="timeline-card" onclick="openBadgeModal(this)" data-img="badges/01_types_technical_testing.png" data-link="404.html" data-title-pt="Tipos e Testes Técnicos" data-title-en="Types and Technical Testing" data-desc-pt="Conhecimento dos diferentes tipos de testes de software, técnicas de validação e metodologias usadas no ciclo de desenvolvimento."
+                        data-desc-en="Knowledge of different software testing types, validation techniques and methodologies used throughout the development lifecycle.">
 
-                <div class="timeline-card" onclick="openModal('LifeLong Learning', 'breve descrição', 'badges/04_lifelong_learning.png', 'certificados/')">
-                    <span class="timeline-dot">
-                    <span class="timeline-label">Certirof · 2022</span>
-                    </span>
-                    <img src="badges/04_lifelong_learning.png" alt="Badge LifeLong Learning">
-                    <h3>LifeLong Learning</h3>
-                </div>
+                        <span class="timeline-dot">
+                            <span class="timeline-label" data-pt="QA Academy" data-en="QA Academy">QA Academy</span>
+                        </span>
 
-                <div class="timeline-card" onclick="openModal('Scrum Fundation', 'breve descrição', 'badges/05_scrum_fundation.png', 'certificados/')">
-                    <span class="timeline-dot">
-                    <span class="timeline-label">Certiprof · 2022/2024</span>
-                    </span>
-                    <img src="badges/05_scrum_fundation.png" alt="Badge Scrum Fundation">
-                    <h3>Scrum Fundation</h3>
-                </div>
+                        <img src="badges/01_types_technical_testing.png" alt="Badge Types and Technical Testing">
+                        <h3 data-pt="Tipos e Testes Técnicos" data-en="Types and Technical Testing">Tipos e Testes Técnicos</h3>
+                    </div>
 
-                <div class="timeline-card" onclick="openModal('Remote Work', 'breve descrição', 'badges/06_remote_work.png', 'certificados/')">
-                    <span class="timeline-dot">
-                    <span class="timeline-label">Certiprof · 2022/2024</span>
-                    </span>
-                    <img src="badges/06_remote_work.png" alt="Badge Remote Work">
-                    <h3>Remote Work</h3>
-                </div>
+                    <div class="timeline-card" onclick="openBadgeModal(this)" data-img="badges/02_fundamental_OOP_test_analysts.png" data-link="404.html" data-title-pt="Fundamentos de OOP para Test Analysts" data-title-en="Fundamental OOP for Test Analysts" data-desc-pt="Aplicação dos conceitos de Programação Orientada a Objetos para análise, automação e compreensão de aplicações de software."
+                        data-desc-en="Application of Object-Oriented Programming concepts for software analysis, automation and understanding application architecture.">
 
-                <div class="timeline-card" onclick="openModal('Project Models', 'breve descrição', 'badges/07_project_models.png', 'certificados/')">
-                    <span class="timeline-dot">
-                    <span class="timeline-label">Rumos · 2022</span>
-                    </span>
-                    <img src="badges/07_project_models.png" alt="Badge Project Models">
-                    <h3>Project Models</h3>
-                </div>
+                        <span class="timeline-dot">
+                            <span class="timeline-label" data-pt="QA Academy" data-en="QA Academy">QA Academy</span>
+                        </span>
 
-                <div class="timeline-card" onclick="openModal('Software Testing', 'breve descrição', 'badges/08_software_testing.png', 'certificados/')">
-                    <span class="timeline-dot">
-                    <span class="timeline-label">Rumos · 2022</span>
-                    </span>
-                    <img src="badges/08_software_testing.png" alt="Badge Software Testing">
-                    <h3>Software Testing</h3>
-                </div>
+                        <img src="badges/02_fundamental_OOP_test_analysts.png" alt="Badge Testing OOP">
+                        <h3 data-pt="Fundamentos de OOP" data-en="Fundamental OOP">Fundamentos de OOP</h3>
+                    </div>
 
-                <div class="timeline-card" onclick="openModal('Practitioner Quality Assurance Tester', 'breve descrição', 'badges/09_practitioner_qatester.png', 'certificados/')">
-                    <span class="timeline-dot">
-                    <span class="timeline-label">Rumos · 2023</span>
-                    </span>
-                    <img src="badges/09_practitioner_qatester.png" alt="Badge Practitioner QA Tester">
-                    <h3>Practitioner QA Tester</h3>
-                </div>
+                    <div class="timeline-card" onclick="openBadgeModal(this)" data-img="badges/03_tester_skills.png" data-link="404.html" data-title-pt="Competências de Tester" data-title-en="Tester Skills" data-desc-pt="Desenvolvimento de competências essenciais em testes, incluindo análise crítica, documentação e comunicação de defeitos."
+                        data-desc-en="Development of key testing skills, including critical analysis, defect reporting, documentation and communication.">
 
-                <div class="timeline-card" onclick="openModal('Tools Techniques Testing', 'breve descrição', 'badges/10_tools_techniques_testing.png', 'certificados/')">
-                    <span class="timeline-dot">
-                    <span class="timeline-label">Rumos · 2023</span>
-                    </span>
-                    <img src="badges/10_tools_techniques_testing.png" alt="Badge Tools Techniques Testing">
-                    <h3>Tools Techniques Testing</h3>
-                </div>
+                        <span class="timeline-dot">
+                            <span class="timeline-label" data-pt="QA Academy" data-en="QA Academy">QA Academy</span>
+                        </span>
 
-                <div class="timeline-card" onclick="openModal('Introduction to Cybersecurity', 'Certificação de introdução à cibersegurança.', 'badges/11_introduction_cybersecurity.png', 'certificados/11_I2CSUpdate20260605-30-ywxkxa.pdf')">
-                    <span class="timeline-dot">
-                    <span class="timeline-label">Cisco · 2023</span>
-                    </span>
-                    <img src="badges/11_introduction_cybersecurity.png" alt="Badge Introduction Cybersecurity">
-                    <h3>Introduction to Cybersecurity</h3>
-                </div>
+                        <img src="badges/03_tester_skills.png" alt="Badge Tester Skills">
+                        <h3 data-pt="Competências de Tester" data-en="Tester Skills">Competências de Tester</h3>
+                    </div>
 
-                <div class="timeline-card" onclick="openModal('Introduction to Internet of Things', 'Certificação de introdução à Internet das Coisas.', 'badges/12_introduction_internet_of_things.png', 'certificados/12_IntrotoIoTUpdate20260605-32-pf414l.pdf')">
-                    <span class="timeline-dot">
-                    <span class="timeline-label">Cisco · 2023</span>
-                    </span>
-                    <img src="badges/12_introduction_internet_of_things.png" alt="Badge Introduction IoT">
-                    <h3>Introduction to IoT</h3>
-                </div>
+                    <div class="timeline-card" onclick="openBadgeModal(this)" data-img="badges/04_lifelong_learning.png" data-link="404.html" data-title-pt="Aprendizagem Contínua" data-title-en="Lifelong Learning" data-desc-pt="Reconhecimento do compromisso com a aprendizagem contínua, atualização técnica e desenvolvimento profissional permanente."
+                        data-desc-en="Recognition of commitment to continuous learning, technical upskilling and ongoing professional development.">
 
-                <div class="timeline-card" onclick="openModal('Computer Hardware Basics', 'Certificação sobre fundamentos de hardware.', 'badges/13_computer_hardware_basics.png', 'certificados/13_ComputerHardwareBasicsUpdate20260605-30-s2nrj1.pdf')">
-                    <span class="timeline-dot">
-                    <span class="timeline-label">Cisco · 2025</span>
-                    </span>
-                    <img src="badges/13_computer_hardware_basics.png" alt="Badge Computer Hardware Basics">
-                    <h3>Computer Hardware Basics</h3>
-                </div>
+                        <span class="timeline-dot">
+                            <span class="timeline-label" data-pt="Formação Contínua" data-en="Continuous Learning">Formação Contínua</span>
+                        </span>
 
-                <div class="timeline-card" onclick="openModal('English for IT 1', 'Certificação English for IT 1.', 'badges/14_English_IT1.png', 'certificados/14_EnglishforIT1Update20260605-30-rz1185.pdf')">
-                    <span class="timeline-dot">
-                    <span class="timeline-label">Cisco · 2026</span>
-                    </span>
-                    <img src="badges/14_English_IT1.png" alt="Badge English IT 1">
-                    <h3>English for IT 1</h3>
-                </div>
+                        <img src="badges/04_lifelong_learning.png" alt="Badge Lifelong Learning">
+                        <h3 data-pt="Aprendizagem Contínua" data-en="Lifelong Learning">Aprendizagem Contínua</h3>
+                    </div>
 
-                <div class="timeline-card" onclick="openModal('English for IT 2', 'Certificação English for IT 2.', 'badges/15_English_IT2.png', 'certificados/15_EnglishforIT2Update20260605-30-dtcvyc.pdf')">
-                    <span class="timeline-dot">
-                    <span class="timeline-label">Cisco · 2026</span>
-                    </span>
-                    <img src="badges/15_English_IT2.png" alt="Badge English IT 2">
-                    <h3>English for IT 2</h3>
-                </div>
+                    <div class="timeline-card" onclick="openBadgeModal(this)" data-img="badges/05_scrum_fundation.png" data-link="404.html" data-title-pt="Scrum Foundation" data-title-en="Scrum Foundation" data-desc-pt="Conhecimento dos princípios Agile e da framework Scrum, incluindo papéis, eventos e artefactos de gestão de projetos."
+                        data-desc-en="Understanding of Agile principles and the Scrum framework, including roles, events and project management artifacts.">
 
-                <div class="timeline-card" onclick="openModal('English for IT - Describing and Comparing', 'Certificação English for IT.', 'badges/16_English_IT_describingcomparing.png', 'certificados/16_EnglishforITDescribingandComparingv120260605-32-1xlbly.pdf')">
-                    <span class="timeline-dot">
-                    <span class="timeline-label">Cisco · 2026</span>
-                    </span>
-                    <img src="badges/16_English_IT_describingcomparing.png" alt="Badge English IT">
-                    <h3>Describing and Comparing</h3>
-                </div>
+                        <span class="timeline-dot">
+                            <span class="timeline-label" data-pt="Scrum · Agile" data-en="Scrum · Agile">Scrum · Agile</span>
+                        </span>
 
-                <div class="timeline-card" onclick="openModal('English for IT - Advice and Time', 'Certificação English for IT.', 'badges/17_English_IT_advicetime.png', 'certificados/17_EnglishforITAdviceandTimev120260605-30-j33wwv.pdf')">
-                    <span class="timeline-dot">
-                    <span class="timeline-label">Cisco · 2026</span>
-                    </span>
-                    <img src="badges/17_English_IT_advicetime.png" alt="Badge English IT">
-                    <h3>Advice and Time</h3>
-                </div>
+                        <img src="badges/05_scrum_fundation.png" alt="Badge Scrum Foundation">
+                        <h3 data-pt="Scrum Foundation" data-en="Scrum Foundation">Scrum Foundation</h3>
+                    </div>
 
-                <div class="timeline-card" onclick="openModal('English for IT - People and Quantities', 'Certificação English for IT.', 'badges/18_English_IT_peoplequantities.png', 'certificados/18_EnglishforITPeopleandQuantitiesv120260605-32-wyth11.pdf')">
-                    <span class="timeline-dot">
-                    <span class="timeline-label">Cisco · 2026</span>
-                    </span>
-                    <img src="badges/18_English_IT_peoplequantities.png" alt="Badge English IT">
-                    <h3>People and Quantities</h3>
-                </div>
+                    <div class="timeline-card" onclick="openBadgeModal(this)" data-img="badges/06_remote_work.png" data-link="404.html" data-title-pt="Trabalho Remoto" data-title-en="Remote Work" data-desc-pt="Boas práticas de trabalho remoto, colaboração digital, gestão de tempo e produtividade em equipas distribuídas."
+                        data-desc-en="Best practices for remote work, digital collaboration, time management and productivity in distributed teams.">
 
-                <div class="timeline-card" onclick="openModal('English for IT - Needs and Responsibilities', 'Certificação English for IT.', 'badges/19_English_IT_needsresponsibilities.png', 'certificados/19_EnglishforITNeedsandResponsibilitiesv120260605-30-lqorj1.pdf')">
-                    <span class="timeline-dot">
-                    <span class="timeline-label">Cisco · 2026</span>
-                    </span>
-                    <img src="badges/19_English_IT_needsresponsibilities.png" alt="Badge English IT">
-                    <h3>Needs and Responsibilities</h3>
-                </div>
+                        <span class="timeline-dot">
+                            <span class="timeline-label" data-pt="Remote Work" data-en="Remote Work">Remote Work</span>
+                        </span>
 
-                <div class="timeline-card" onclick="openModal('Networking Basics', 'Certificação sobre fundamentos de redes.', 'badges/20_networking_basics.png', 'certificados/20_NetworkingBasicsUpdate20260605-32-mguc8e.pdf')">
-                    <span class="timeline-dot">
-                    <span class="timeline-label">Cisco · 2026</span>
-                    </span>
-                    <img src="badges/20_networking_basics.png" alt="Badge Networking Basics">
-                    <h3>Networking Basics</h3>
-                </div>
+                        <img src="badges/06_remote_work.png" alt="Badge Remote Work">
+                        <h3 data-pt="Trabalho Remoto" data-en="Remote Work">Trabalho Remoto</h3>
+                    </div>
 
-                <div class="timeline-card" onclick="openModal('Word', 'Curso de Word - 40 horas.', 'badges/soon.png', 'certificados/21_cursoemvideo_word_40horas.pdf')">
-                    <span class="timeline-dot">
-                    <span class="timeline-label">cursoemvideo.com · 2022</span>
-                    </span>
-                    <img src="badges/soon.png" alt="Badge Word">
-                    <h3>Word</h3>
-                </div>
+                    <div class="timeline-card" onclick="openBadgeModal(this)" data-img="badges/07_project_models.png" data-link="404.html" data-title-pt="Modelos de Projeto" data-title-en="Project Models" data-desc-pt="Conhecimento dos principais modelos de gestão e desenvolvimento de projetos, incluindo abordagens tradicionais e Agile."
+                        data-desc-en="Understanding of project management and software development models, including traditional and Agile approaches.">
 
-                <div class="timeline-card" onclick="openModal('Excel', 'Curso de Excel - 40 horas.', 'badges/soon.png', 'certificados/22_cursoemvideo_excel_40horas.pdf')">
-                    <span class="timeline-dot">
-                    <span class="timeline-label">cursoemvideo.com · 2022</span>
-                    </span>
-                    <img src="badges/soon.png" alt="Badge Excel">
-                    <h3>Excel</h3>
-                </div>
+                        <span class="timeline-dot">
+                            <span class="timeline-label" data-pt="Projetos" data-en="Projects">Projetos</span>
+                        </span>
 
-                <div class="timeline-card" onclick="openModal('Git e GitHub', 'Curso de Git e GitHub - 20 horas.', 'badges/soon.png', 'certificados/23_cursoemvideo_git_e_github_20horas.pdf')">
-                    <span class="timeline-dot">
-                    <span class="timeline-label">cursoemvideo.com · 2026</span>
-                    </span>
-                    <img src="badges/soon.png" alt="Badge Git e GitHub">
-                    <h3>Git e GitHub</h3>
-                </div>
+                        <img src="badges/07_project_models.png" alt="Badge Project Models">
+                        <h3 data-pt="Modelos de Projeto" data-en="Project Models">Modelos de Projeto</h3>
+                    </div>
 
-                <div class="timeline-card" onclick="openModal('Hardware', 'Curso de Hardware - 20 horas.', 'badges/soon.png', 'certificados/24_cursoemvideo_hardware_20horas.pdf')">
-                    <span class="timeline-dot">
-                    <span class="timeline-label">cursoemvideo.com · 2022</span>
-                    </span>
-                    <img src="badges/soon.png" alt="Badge Hardware">
-                    <h3>Hardware</h3>
-                </div>
+                    <div class="timeline-card" onclick="openBadgeModal(this)" data-img="badges/08_software_testing.png" data-link="404.html" data-title-pt="Testes de Software" data-title-en="Software Testing" data-desc-pt="Fundamentos de testes de software, estratégias de validação, garantia de qualidade e melhoria contínua de produtos digitais."
+                        data-desc-en="Software testing fundamentals, validation strategies, quality assurance and continuous improvement of digital products.">
 
-                <div class="timeline-card" onclick="openModal('Photoshop', 'Curso de Photoshop - 20 horas.', 'badges/soon.png', 'certificados/25_cursoemvideo_photoshop20horas.pdf')">
-                    <span class="timeline-dot">
-                    <span class="timeline-label">cursoemvideo.com · 2022</span>
-                    </span>
-                    <img src="badges/soon.png" alt="Badge Photoshop">
-                    <h3>Photoshop</h3>
+                        <span class="timeline-dot">
+                            <span class="timeline-label" data-pt="QA Testing" data-en="QA Testing">QA Testing</span>
+                        </span>
+
+                        <img src="badges/08_software_testing.png" alt="Badge Software Testing">
+                        <h3 data-pt="Testes de Software" data-en="Software Testing">Testes de Software</h3>
+                    </div>
+
+                    <div class="timeline-card" onclick="openBadgeModal(this)" data-img="badges/09_practitioner_qatester.png" data-link="404.html" data-title-pt="Practitioner QA Tester" data-title-en="Practitioner Quality Assurance Tester" data-desc-pt="Certificação prática em Quality Assurance, abrangendo planeamento, execução, documentação e melhoria dos processos de teste."
+                        data-desc-en="Practical Quality Assurance certification covering test planning, execution, documentation and test process improvement.">
+
+                        <span class="timeline-dot">
+                            <span class="timeline-label" data-pt="QA Practitioner" data-en="QA Practitioner">QA Practitioner</span>
+                        </span>
+
+                        <img src="badges/09_practitioner_qatester.png" alt="Badge Practitioner QA Tester">
+                        <h3 data-pt="Practitioner QA Tester" data-en="Practitioner QA Tester">Practitioner QA Tester</h3>
+                    </div>
+
+                    <div class="timeline-card" onclick="openBadgeModal(this)" data-img="badges/10_tools_techniques_testing.png" data-link="404.html" data-title-pt="Ferramentas e Técnicas de Teste" data-title-en="Testing Tools and Techniques" data-desc-pt="Utilização de ferramentas e técnicas de teste para aumentar a eficiência, rastreabilidade e qualidade do software."
+                        data-desc-en="Use of testing tools and techniques to improve efficiency, traceability and software quality.">
+
+                        <span class="timeline-dot">
+                            <span class="timeline-label" data-pt="QA Tools" data-en="QA Tools">QA Tools</span>
+                        </span>
+
+                        <img src="badges/10_tools_techniques_testing.png" alt="Badge Tools Techniques Testing">
+                        <h3 data-pt="Ferramentas de Teste" data-en="Testing Tools">Ferramentas de Teste</h3>
+                    </div>
+
+                    <div class="timeline-card" onclick="openBadgeModal(this)" data-img="badges/11_introduction_cybersecurity.png" data-link="certificados/11_I2CSUpdate20260605-30-ywxkxa.pdf" data-title-pt="Introdução à Cibersegurança" data-title-en="Introduction to Cybersecurity"
+                        data-desc-pt="Introdução aos conceitos fundamentais de cibersegurança, proteção de dados, ameaças digitais e boas práticas de segurança." data-desc-en="Introduction to cybersecurity fundamentals, data protection, digital threats and security best practices.">
+
+                        <span class="timeline-dot">
+                            <span class="timeline-label" data-pt="Cisco · Cybersecurity" data-en="Cisco · Cybersecurity">Cisco · Cybersecurity</span>
+                        </span>
+
+                        <img src="badges/11_introduction_cybersecurity.png" alt="Badge Introduction Cybersecurity">
+                        <h3 data-pt="Introdução à Cibersegurança" data-en="Introduction to Cybersecurity">Introdução à Cibersegurança</h3>
+                    </div>
+
+                    <div class="timeline-card" onclick="openBadgeModal(this)" data-img="badges/12_introduction_internet_of_things.png" data-link="certificados/12_IntrotoIoTUpdate20260605-32-pf414l.pdf" data-title-pt="Introdução à Internet das Coisas" data-title-en="Introduction to Internet of Things"
+                        data-desc-pt="Conhecimento introdutório sobre IoT, dispositivos conectados, sensores, automação e impacto das redes inteligentes." data-desc-en="Introductory knowledge of IoT, connected devices, sensors, automation and the impact of smart networks.">
+
+                        <span class="timeline-dot">
+                            <span class="timeline-label" data-pt="Cisco · IoT" data-en="Cisco · IoT">Cisco · IoT</span>
+                        </span>
+
+                        <img src="badges/12_introduction_internet_of_things.png" alt="Badge Introduction IoT">
+                        <h3 data-pt="Introdução à IoT" data-en="Introduction to IoT">Introdução à IoT</h3>
+                    </div>
+
+                    <div class="timeline-card" onclick="openBadgeModal(this)" data-img="badges/13_computer_hardware_basics.png" data-link="certificados/13_ComputerHardwareBasicsUpdate20260605-30-s2nrj1.pdf" data-title-pt="Fundamentos de Hardware" data-title-en="Computer Hardware Basics"
+                        data-desc-pt="Conhecimentos essenciais sobre componentes de computador, funcionamento de hardware, manutenção e diagnóstico básico." data-desc-en="Essential knowledge of computer components, hardware operation, maintenance and basic troubleshooting.">
+
+                        <span class="timeline-dot">
+                            <span class="timeline-label" data-pt="Cisco · Hardware" data-en="Cisco · Hardware">Cisco · Hardware</span>
+                        </span>
+
+                        <img src="badges/13_computer_hardware_basics.png" alt="Badge Computer Hardware Basics">
+                        <h3 data-pt="Fundamentos de Hardware" data-en="Computer Hardware Basics">Fundamentos de Hardware</h3>
+                    </div>
+
+                    <div class="timeline-card" onclick="openBadgeModal(this)" data-img="badges/14_English_IT1.png" data-link="certificados/14_EnglishforIT1Update20260605-30-rz1185.pdf" data-title-pt="Inglês para IT 1" data-title-en="English for IT 1" data-desc-pt="Desenvolvimento de vocabulário técnico em inglês aplicado às Tecnologias de Informação e comunicação profissional."
+                        data-desc-en="Development of technical English vocabulary applied to Information Technology and professional communication.">
+
+                        <span class="timeline-dot">
+                            <span class="timeline-label" data-pt="Cisco · English IT" data-en="Cisco · English IT">Cisco · English IT</span>
+                        </span>
+
+                        <img src="badges/14_English_IT1.png" alt="Badge English IT 1">
+                        <h3 data-pt="Inglês para IT 1" data-en="English for IT 1">Inglês para IT 1</h3>
+                    </div>
+
+                    <div class="timeline-card" onclick="openBadgeModal(this)" data-img="badges/15_English_IT2.png" data-link="certificados/15_EnglishforIT2Update20260605-30-dtcvyc.pdf" data-title-pt="Inglês para IT 2" data-title-en="English for IT 2" data-desc-pt="Aprofundamento da comunicação técnica em inglês para contextos de suporte, desenvolvimento e ambientes profissionais de IT."
+                        data-desc-en="Further development of technical English communication for support, development and professional IT environments.">
+
+                        <span class="timeline-dot">
+                            <span class="timeline-label" data-pt="Cisco · English IT" data-en="Cisco · English IT">Cisco · English IT</span>
+                        </span>
+
+                        <img src="badges/15_English_IT2.png" alt="Badge English IT 2">
+                        <h3 data-pt="Inglês para IT 2" data-en="English for IT 2">Inglês para IT 2</h3>
+                    </div>
+
+                    <div class="timeline-card" onclick="openBadgeModal(this)" data-img="badges/16_English_IT_describingcomparing.png" data-link="certificados/16_EnglishforITDescribingandComparingv120260605-32-1xlbly.pdf" data-title-pt="Inglês para IT: Descrever e Comparar"
+                        data-title-en="English for IT: Describing and Comparing" data-desc-pt="Competências de inglês técnico para descrever sistemas, comparar soluções e comunicar características de produtos tecnológicos." data-desc-en="Technical English skills to describe systems, compare solutions and communicate features of technology products.">
+
+                        <span class="timeline-dot">
+                            <span class="timeline-label" data-pt="Cisco · English IT" data-en="Cisco · English IT">Cisco · English IT</span>
+                        </span>
+
+                        <img src="badges/16_English_IT_describingcomparing.png" alt="Badge English IT Describing Comparing">
+                        <h3 data-pt="Descrever e Comparar" data-en="Describing and Comparing">Descrever e Comparar</h3>
+                    </div>
+
+                    <div class="timeline-card" onclick="openBadgeModal(this)" data-img="badges/17_English_IT_advicetime.png" data-link="certificados/17_EnglishforITAdviceandTimev120260605-30-j33wwv.pdf" data-title-pt="Inglês para IT: Conselho e Tempo" data-title-en="English for IT: Advice and Time"
+                        data-desc-pt="Competências linguísticas para dar recomendações, gerir prazos e comunicar tarefas em ambientes técnicos." data-desc-en="Language skills to give recommendations, manage timelines and communicate tasks in technical environments.">
+
+                        <span class="timeline-dot">
+                            <span class="timeline-label" data-pt="Cisco · English IT" data-en="Cisco · English IT">Cisco · English IT</span>
+                        </span>
+
+                        <img src="badges/17_English_IT_advicetime.png" alt="Badge English IT Advice Time">
+                        <h3 data-pt="Conselho e Tempo" data-en="Advice and Time">Conselho e Tempo</h3>
+                    </div>
+
+                    <div class="timeline-card" onclick="openBadgeModal(this)" data-img="badges/18_English_IT_peoplequantities.png" data-link="certificados/18_EnglishforITPeopleandQuantitiesv120260605-32-wyth11.pdf" data-title-pt="Inglês para IT: Pessoas e Quantidades" data-title-en="English for IT: People and Quantities"
+                        data-desc-pt="Vocabulário e estruturas em inglês para falar sobre equipas, utilizadores, quantidades e recursos em contexto tecnológico." data-desc-en="English vocabulary and structures to discuss teams, users, quantities and resources in technology contexts.">
+
+                        <span class="timeline-dot">
+                            <span class="timeline-label" data-pt="Cisco · English IT" data-en="Cisco · English IT">Cisco · English IT</span>
+                        </span>
+
+                        <img src="badges/18_English_IT_peoplequantities.png" alt="Badge English IT People Quantities">
+                        <h3 data-pt="Pessoas e Quantidades" data-en="People and Quantities">Pessoas e Quantidades</h3>
+                    </div>
+
+                    <div class="timeline-card" onclick="openBadgeModal(this)" data-img="badges/19_English_IT_needsresponsibilities.png" data-link="certificados/19_EnglishforITNeedsandResponsibilitiesv120260605-30-lqorj1.pdf" data-title-pt="Inglês para IT: Necessidades e Responsabilidades"
+                        data-title-en="English for IT: Needs and Responsibilities" data-desc-pt="Comunicação em inglês sobre requisitos, responsabilidades, necessidades de utilizadores e tarefas profissionais em IT." data-desc-en="English communication around requirements, responsibilities, user needs and professional IT tasks.">
+
+                        <span class="timeline-dot">
+                            <span class="timeline-label" data-pt="Cisco · English IT" data-en="Cisco · English IT">Cisco · English IT</span>
+                        </span>
+
+                        <img src="badges/19_English_IT_needsresponsibilities.png" alt="Badge English IT Needs Responsibilities">
+                        <h3 data-pt="Necessidades e Responsabilidades" data-en="Needs and Responsibilities">Necessidades e Responsabilidades</h3>
+                    </div>
+
+                    <div class="timeline-card" onclick="openBadgeModal(this)" data-img="badges/20_networking_basics.png" data-link="certificados/20_NetworkingBasicsUpdate20260605-32-mguc8e.pdf" data-title-pt="Fundamentos de Redes" data-title-en="Networking Basics" data-desc-pt="Conhecimentos fundamentais de redes, endereçamento IP, conectividade, dispositivos de rede e princípios básicos de comunicação."
+                        data-desc-en="Fundamental knowledge of networking, IP addressing, connectivity, network devices and basic communication principles.">
+
+                        <span class="timeline-dot">
+                            <span class="timeline-label" data-pt="Cisco · Redes" data-en="Cisco · Networking">Cisco · Redes</span>
+                        </span>
+
+                        <img src="badges/20_networking_basics.png" alt="Badge Networking Basics">
+                        <h3 data-pt="Fundamentos de Redes" data-en="Networking Basics">Fundamentos de Redes</h3>
+                    </div>
+
+                    <div class="timeline-card" onclick="openBadgeModal(this)" data-img="badges/soon.png" data-link="certificados/21_cursoemvideo_word_40horas.pdf" data-title-pt="Word" data-title-en="Word" data-desc-pt="Formação em processamento de texto, estruturação de documentos, formatação profissional e produtividade com Microsoft Word."
+                        data-desc-en="Training in word processing, document structuring, professional formatting and productivity with Microsoft Word.">
+
+                        <span class="timeline-dot">
+                            <span class="timeline-label" data-pt="Curso em Vídeo" data-en="Curso em Vídeo">Curso em Vídeo</span>
+                        </span>
+
+                        <img src="badges/soon.png" alt="Badge Word">
+                        <h3 data-pt="Word" data-en="Word">Word</h3>
+                    </div>
+
+                    <div class="timeline-card" onclick="openBadgeModal(this)" data-img="badges/soon.png" data-link="certificados/22_cursoemvideo_excel_40horas.pdf" data-title-pt="Excel" data-title-en="Excel" data-desc-pt="Formação em folhas de cálculo, organização de dados, fórmulas, tabelas e ferramentas de produtividade com Microsoft Excel."
+                        data-desc-en="Training in spreadsheets, data organization, formulas, tables and productivity tools with Microsoft Excel.">
+
+                        <span class="timeline-dot">
+                            <span class="timeline-label" data-pt="Curso em Vídeo" data-en="Curso em Vídeo">Curso em Vídeo</span>
+                        </span>
+
+                        <img src="badges/soon.png" alt="Badge Excel">
+                        <h3 data-pt="Excel" data-en="Excel">Excel</h3>
+                    </div>
+
+                    <div class="timeline-card" onclick="openBadgeModal(this)" data-img="badges/soon.png" data-link="certificados/23_cursoemvideo_git_e_github_20horas.pdf" data-title-pt="Git e GitHub" data-title-en="Git and GitHub" data-desc-pt="Formação em controlo de versões, gestão de repositórios, colaboração em projetos e publicação de código com Git e GitHub."
+                        data-desc-en="Training in version control, repository management, project collaboration and code publishing with Git and GitHub.">
+
+                        <span class="timeline-dot">
+                            <span class="timeline-label" data-pt="GitHub" data-en="GitHub">GitHub</span>
+                        </span>
+
+                        <img src="badges/soon.png" alt="Badge Git e GitHub">
+                        <h3 data-pt="Git e GitHub" data-en="Git and GitHub">Git e GitHub</h3>
+                    </div>
+
+                    <div class="timeline-card" onclick="openBadgeModal(this)" data-img="badges/soon.png" data-link="certificados/24_cursoemvideo_hardware_20horas.pdf" data-title-pt="Hardware" data-title-en="Hardware" data-desc-pt="Formação sobre componentes físicos de computadores, montagem, manutenção e conceitos fundamentais de funcionamento."
+                        data-desc-en="Training on physical computer components, assembly, maintenance and fundamental operating concepts.">
+
+                        <span class="timeline-dot">
+                            <span class="timeline-label" data-pt="Curso em Vídeo" data-en="Curso em Vídeo">Curso em Vídeo</span>
+                        </span>
+
+                        <img src="badges/soon.png" alt="Badge Hardware">
+                        <h3 data-pt="Hardware" data-en="Hardware">Hardware</h3>
+                    </div>
+
+                    <div class="timeline-card" onclick="openBadgeModal(this)" data-img="badges/soon.png" data-link="certificados/25_cursoemvideo_photoshop20horas.pdf" data-title-pt="Photoshop" data-title-en="Photoshop" data-desc-pt="Formação introdutória em edição de imagem, composição visual, tratamento gráfico e ferramentas essenciais do Adobe Photoshop."
+                        data-desc-en="Introductory training in image editing, visual composition, graphic treatment and essential Adobe Photoshop tools.">
+
+                        <span class="timeline-dot">
+                            <span class="timeline-label" data-pt="Design" data-en="Design">Design</span>
+                        </span>
+
+                        <img src="badges/soon.png" alt="Badge Photoshop">
+                        <h3 data-pt="Photoshop" data-en="Photoshop">Photoshop</h3>
+                    </div>
+
                 </div>
 
             </div>
@@ -280,16 +345,28 @@
             <h2 id="modalTitle"></h2>
             <p id="modalDesc"></p>
 
-            <a id="modalLink" href="#" target="_blank">Ver certificado</a>
+            <a id="modalLink" href="#" target="_blank" data-pt="Ver certificado" data-en="View certificate">
+                Ver certificado
+            </a>
         </div>
     </div>
 
     <script>
-        function openModal(title, desc, img, link) {
-            document.getElementById("modalTitle").innerText = title;
-            document.getElementById("modalDesc").innerText = desc;
-            document.getElementById("modalImg").src = img;
-            document.getElementById("modalLink").href = link;
+        function getCurrentLang() {
+            return navigator.language.toLowerCase().startsWith("pt") ? "pt" : "en";
+        }
+
+        function openBadgeModal(card) {
+            const lang = getCurrentLang();
+
+            const title = lang === "pt" ? card.dataset.titlePt : card.dataset.titleEn;
+            const desc = lang === "pt" ? card.dataset.descPt : card.dataset.descEn;
+
+            document.getElementById("modalTitle").textContent = title;
+            document.getElementById("modalDesc").textContent = desc;
+            document.getElementById("modalImg").src = card.dataset.img;
+            document.getElementById("modalLink").href = card.dataset.link;
+
             document.getElementById("badgeModal").style.display = "flex";
         }
 
@@ -348,13 +425,9 @@
         });
     </script>
 
-    <script>
-        const navbar = document.querySelector('.navbar');
+    <script src="js/navbar.js"></script>
+    <script src="js/language.js"></script>
 
-        window.addEventListener('scroll', () => {
-            navbar.classList.toggle('scrolled', window.scrollY > 60);
-        });
-    </script>
 </body>
 
 </html>

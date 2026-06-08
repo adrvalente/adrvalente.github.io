@@ -11,39 +11,9 @@
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="logo">
-            <a href="index.html">adrianovalente.pt</a>
-        </div>
-
-        <div class="nav-links">
-            <a href="cv.html" class="active">
-                <span class="nav-icon">👨‍💻</span>
-                <span class="nav-text">Sobre Mim</span>
-            </a>
-
-            <a href="projetos.html">
-                <span class="nav-icon">🚀</span>
-                <span class="nav-text">Projetos</span>
-            </a>
-
-            <a href="badges.html">
-                <span class="nav-icon">🏆</span>
-                <span class="nav-text">Certificados</span>
-            </a>
-
-            <a href="contacto.html">
-                <span class="nav-icon">📞</span>
-                <span class="nav-text">Contactos</span>
-            </a>
-        </div>
-    </nav>
+    <div id="navbar"></div>
 
     <header class=" hero ">
-
-        <button class="lang-btn " onclick="toggleLanguage() ">
-            PT / EN
-        </button>
 
         <img src="https://avatars.githubusercontent.com/u/286309621?v=4 " alt="Foto de perfil Adriano Valente " class="profile-img ">
 
@@ -397,6 +367,10 @@ Recognized for strong analytical thinking, adaptability, continuous learning, an
 
     </main>
 
+    <footer>
+        © 2026 adrvalente · GitHub Portfolio
+    </footer>
+
     <script>
         let currentLang = "pt ";
 
@@ -437,6 +411,8 @@ Recognized for strong analytical thinking, adaptability, continuous learning, an
             navbar.classList.toggle('scrolled', window.scrollY > 60);
         });
     </script>
+    <script src="js/navbar.js"></script>
+    <script src="js/language.js"></script>
 </body>
 
 </html>
