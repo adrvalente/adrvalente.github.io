@@ -338,16 +338,19 @@
     </footer>
 
     <div id="badgeModal" class="modal">
-        <div class="modal-content">
+        <div class="modal-content modal-large">
             <span class="close" onclick="closeModal()">&times;</span>
 
             <img id="modalImg" src="" alt="Badge selecionado">
+
             <h2 id="modalTitle"></h2>
             <p id="modalDesc"></p>
 
-            <a id="modalLink" href="#" target="_blank" data-pt="Ver certificado" data-en="View certificate">
-                Ver certificado
-            </a>
+            <iframe id="modalPdf" src="" frameborder="0"></iframe>
+
+            <a id="openPdf" href="#" target="_blank" class="pdf-button" data-pt="Abrir PDF numa nova aba" data-en="Open PDF in new tab">
+            Abrir PDF numa nova aba
+        </a>
         </div>
     </div>
 
@@ -365,13 +368,16 @@
             document.getElementById("modalTitle").textContent = title;
             document.getElementById("modalDesc").textContent = desc;
             document.getElementById("modalImg").src = card.dataset.img;
-            document.getElementById("modalLink").href = card.dataset.link;
+
+            document.getElementById("modalPdf").src = card.dataset.link;
+            document.getElementById("openPdf").href = card.dataset.link;
 
             document.getElementById("badgeModal").style.display = "flex";
         }
 
         function closeModal() {
             document.getElementById("badgeModal").style.display = "none";
+            document.getElementById("modalPdf").src = "";
         }
 
         document.addEventListener("DOMContentLoaded", function() {
