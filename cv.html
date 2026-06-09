@@ -25,7 +25,7 @@
             IT Support • Quality Assurance • Programação • Dados
         </p>
 
-        <a id="cv-download " href="docs/CV_Adriano_Valente_PT.pdf " target="_blank " class="download-btn " data-pt="📄 Download CV (PT) " data-en="📄 Download Resume (EN) ">
+        <a id="cv-download" href="docs/CV_Adriano_Valente_PT.pdf" target="_blank" class="download-btn" data-pt="📄 Download CV (PT)" data-en="📄 Download Resume (EN)">
     📄 Download CV (PT)
 </a>
 
@@ -372,13 +372,13 @@ Recognized for strong analytical thinking, adaptability, continuous learning, an
     </footer>
 
     <script>
-        let currentLang = "pt ";
+        let currentLang = "pt";
 
         function toggleLanguage() {
 
-            currentLang = currentLang === "pt " ?
-                "en " :
-                "pt ";
+            currentLang = currentLang === "pt" ?
+                "en" :
+                "pt";
 
             document.querySelectorAll("[data-pt] ").forEach(element => {
                 element.textContent = element.dataset[currentLang];
@@ -386,22 +386,22 @@ Recognized for strong analytical thinking, adaptability, continuous learning, an
 
             const downloadBtn = document.getElementById("cv-download ");
 
-            if (currentLang === "en ") {
+            if (currentLang === "en") {
 
                 downloadBtn.href =
-                    "docs/CV_Adriano_Valente_EN.pdf ";
+                    "docs/CV_Adriano_Valente_EN.pdf";
 
             } else {
 
                 downloadBtn.href =
-                    "docs/CV_Adriano_Valente_PT.pdf ";
+                    "docs/CV_Adriano_Valente_PT.pdf";
 
             }
 
             document.documentElement.lang =
-                currentLang === "pt " ?
-                "pt-PT " :
-                "en ";
+                currentLang === "pt" ?
+                "pt-PT" :
+                "en";
         }
     </script>
     <script>
