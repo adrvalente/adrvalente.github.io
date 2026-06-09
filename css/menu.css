@@ -160,7 +160,50 @@ body {
    RESPONSIVO
 ========================== */
 
+
+/* ==========================
+   MOBILE VIEW
+========================== */
+
 @media (max-width: 768px) {
+    body {
+        padding-top: 90px;
+    }
+    .navbar {
+        width: calc(100% - 24px);
+        top: 10px;
+        padding: 12px 16px;
+        border-radius: 16px;
+        gap: 12px;
+    }
+    .logo a {
+        font-size: 0.95rem;
+        white-space: nowrap;
+    }
+    .nav-links {
+        gap: 8px;
+    }
+    .nav-links a {
+        padding: 8px 10px;
+        border-radius: 12px;
+    }
+    .nav-text {
+        display: none;
+    }
+    .nav-icon {
+        font-size: 1.25rem;
+    }
+    .nav-lang {
+        margin-left: 4px;
+    }
+    .lang-btn {
+        padding: 7px 10px;
+        font-size: 0.8rem;
+    }
+}
+
+
+/* @media (max-width: 768px) {
     body {
         padding-top: 180px;
     }
@@ -195,3 +238,5 @@ body {
         display: none;
     }
 }
+
+*/
