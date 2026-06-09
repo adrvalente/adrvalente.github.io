@@ -13,8 +13,9 @@
 <body>
     <div id="navbar"></div>
 
-    <header class=" hero ">
 
+
+    <header class=" hero ">
         <img src="https://avatars.githubusercontent.com/u/286309621?v=4 " alt="Foto de perfil Adriano Valente " class="profile-img ">
 
         <h1 data-pt="Adriano Valente " data-en="Adriano Valente ">
@@ -351,7 +352,7 @@ Recognized for strong analytical thinking, adaptability, continuous learning, an
 
         <section class="card contact-card ">
 
-            <h2 data-pt="Contacto " data-en="Contact ">
+            <h2 data-pt="Contacto" data-en="Contact ">
                 Contacto
             </h2>
 
@@ -359,8 +360,8 @@ Recognized for strong analytical thinking, adaptability, continuous learning, an
                 Disponível para projetos, colaboração e oportunidades na área tecnológica.
             </p>
 
-            <div class="contact-links ">
-                <a href="contacto.html ">Envia uma mensagem</a>
+            <div class="contact-links">
+                <a href="contacto.html">Envia uma mensagem</a>
             </div>
 
         </section>
@@ -371,48 +372,6 @@ Recognized for strong analytical thinking, adaptability, continuous learning, an
         © 2026 adrvalente · GitHub Portfolio
     </footer>
 
-    <!--
-    <script>
-        let currentLang = "pt";
-
-        function toggleLanguage() {
-
-            currentLang = currentLang === "pt" ?
-                "en" :
-                "pt";
-
-            document.querySelectorAll("[data-pt] ").forEach(element => {
-                element.textContent = element.dataset[currentLang];
-            });
-
-            const downloadBtn = document.getElementById("cv-download ");
-
-            if (currentLang === "en") {
-
-                downloadBtn.href =
-                    "docs/CV_Adriano_Valente_EN.pdf";
-
-            } else {
-
-                downloadBtn.href =
-                    "docs/CV_Adriano_Valente_PT.pdf";
-
-            }
-
-            document.documentElement.lang =
-                currentLang === "pt" ?
-                "pt-PT" :
-                "en";
-        }
-    </script>-->
-
-    <script>
-        const navbar = document.querySelector('.navbar');
-
-        window.addEventListener('scroll', () => {
-            navbar.classList.toggle('scrolled', window.scrollY > 60);
-        });
-    </script>
     <script src="js/navbar.js"></script>
     <script src="js/language.js"></script>
 </body>

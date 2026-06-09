@@ -5,8 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     navbarContainer.innerHTML = `
         <nav class="navbar">
-            <div class="logo">
-                <a href="index.html">adrianovalente.pt</a>
+            <div class="nav-lang">
+                <button class="lang-btn" onclick="toggleLanguage()">
+                    PT / EN
+                </button>
             </div>
 
             <div class="nav-links">
@@ -37,18 +39,20 @@ document.addEventListener("DOMContentLoaded", () => {
     const currentPage = window.location.pathname.split("/").pop() || "index.html";
 
     document.querySelectorAll(".navbar .nav-links a").forEach(link => {
-        const linkPage = link.getAttribute("href");
-
-        if (linkPage === currentPage) {
+        if (link.getAttribute("href") === currentPage) {
             link.classList.add("active");
         }
     });
 
     window.addEventListener("scroll", () => {
-        if (window.scrollY > 40) {
-            navbar.classList.add("scrolled");
-        } else {
-            navbar.classList.remove("scrolled");
-        }
+        navbar.classList.toggle("scrolled", window.scrollY > 40);
+    });
+
+    const lang =
+        localStorage.getItem("lang") ||
+        (navigator.language.toLowerCase().startsWith("pt") ? "pt" : "en");
+
+    document.querySelectorAll(".navbar [data-pt][data-en]").forEach(element => {
+        element.innerHTML = lang === "pt" ? element.dataset.pt : element.dataset.en;
     });
 });

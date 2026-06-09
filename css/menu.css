@@ -17,35 +17,68 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 25px;
     background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 18px;
     z-index: 1000;
-    transition: top 0.35s ease, left 0.35s ease, transform 0.35s ease, width 0.35s ease, max-width 0.35s ease, padding 0.35s ease, border-radius 0.35s ease, background 0.35s ease, box-shadow 0.35s ease, border 0.35s ease;
-}
-
-.logo {
     transition: all 0.35s ease;
 }
 
-.logo a {
-    color: #60a5fa;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: bold;
-    letter-spacing: 1px;
+
+/* ==========================
+   BOTÃO PT / EN
+========================== */
+
+.nav-lang {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    order: 1;
     transition: all 0.35s ease;
 }
+
+.lang-btn {
+    position: static;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: white;
+    padding: 10px 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    transition: 0.3s ease;
+}
+
+.lang-btn:hover {
+    background: rgba(37, 99, 235, 0.9);
+    box-shadow: 0 0 18px rgba(37, 99, 235, 0.45);
+}
+
+
+/* ==========================
+   LINKS
+========================== */
 
 .nav-links {
     display: flex;
+    align-items: center;
+    justify-content: flex-end;
     gap: 25px;
+    order: 2;
     transition: gap 0.35s ease;
 }
 
 .nav-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
     text-decoration: none;
     color: #e5e7eb;
     font-weight: 500;
@@ -65,6 +98,11 @@ body {
     box-shadow: 0 0 20px rgba(37, 99, 235, 0.5);
 }
 
+.nav-icon,
+.nav-text {
+    transition: all 0.3s ease;
+}
+
 
 /* ==========================
    NAVBAR COLAPSADA
@@ -78,17 +116,20 @@ body {
     max-width: none;
     padding: 8px 18px;
     justify-content: center;
+    gap: 0;
     background: rgba(15, 23, 42, 0.95);
     border: 1px solid rgba(96, 165, 250, 0.25);
     border-radius: 999px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
-.navbar.scrolled .logo {
+.navbar.scrolled .nav-lang {
     width: 0;
     opacity: 0;
     overflow: hidden;
     margin: 0;
+    padding: 0;
+    pointer-events: none;
 }
 
 .navbar.scrolled .nav-links {
@@ -96,8 +137,22 @@ body {
 }
 
 .navbar.scrolled .nav-links a {
-    padding: 8px 12px;
-    font-size: 0.9rem;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar.scrolled .nav-text {
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.navbar.scrolled .nav-icon {
+    font-size: 1.1rem;
 }
 
 
@@ -110,52 +165,33 @@ body {
         padding-top: 180px;
     }
     .navbar {
+        width: 90%;
+        padding: 15px;
         flex-direction: column;
         gap: 15px;
+    }
+    .nav-lang {
+        justify-content: center;
+        width: 100%;
     }
     .nav-links {
         flex-direction: column;
         width: 100%;
+        gap: 10px;
     }
     .nav-links a {
+        width: 100%;
+        justify-content: center;
         text-align: center;
     }
     .navbar.scrolled {
+        left: 50%;
+        transform: translateX(-50%);
         width: 90%;
         padding: 12px;
         border-radius: 18px;
     }
-    .navbar.scrolled .logo {
+    .navbar.scrolled .nav-lang {
         display: none;
     }
-}
-
-
-/*==================================
-   TESTE Colapse MENU BAR EMOJIS
-==================================*/
-
-.nav-icon,
-.nav-text {
-    transition: all 0.3s ease;
-}
-
-.navbar.scrolled .nav-text {
-    opacity: 0;
-    width: 0;
-    overflow: hidden;
-    display: inline-block;
-}
-
-.navbar.scrolled .nav-links a {
-    width: 42px;
-    height: 42px;
-    padding: 0;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-
-.navbar.scrolled .nav-icon {
-    font-size: 1.1rem;
 }
