@@ -197,7 +197,63 @@ p {
     }
 }
 
-@media(max-width: 768px) {
+
+/* ==========================
+   MOBILE - INDEX
+========================== */
+
+
+/* ==========================
+   MOBILE - INDEX
+========================== */
+
+@media (max-width: 768px) {
+    body {
+        min-height: 100dvh;
+        overflow: hidden;
+    }
+    .container {
+        width: 100%;
+        min-height: 100dvh;
+        padding: 0 22px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transform: translateY(-25px);
+    }
+    .avatar {
+        width: 115px;
+        height: 115px;
+        margin-bottom: 28px;
+    }
+    h1 {
+        font-size: clamp(2.7rem, 11vw, 4rem);
+        line-height: 1.05;
+        margin-bottom: 24px;
+        white-space: nowrap;
+    }
+    .subtitle {
+        font-size: 1.25rem;
+        line-height: 1.5;
+        margin-bottom: 22px;
+    }
+    .description {
+        font-size: 1.15rem;
+        line-height: 1.5;
+        margin-bottom: 36px;
+    }
+    .enter-btn,
+    .status-btn {
+        width: 100%;
+        max-width: 590px;
+        min-height: 78px;
+        font-size: 1.05rem;
+        border-radius: 40px;
+    }
+}
+
+
+/*@media(max-width: 768px) {
     h1 {
         font-size: 2.6rem;
     }
@@ -216,4 +272,10 @@ p {
         font-size: 0.95rem;
         padding: 14px 18px;
     }
+}
+    */
+
+
+}
+
 }
