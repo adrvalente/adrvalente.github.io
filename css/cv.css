@@ -271,56 +271,7 @@ footer {
 }
 
 
-/* RESPONSIVO */
-
-@media (max-width: 768px) {
-    .hero {
-        padding-top: 75px;
-    }
-    .hero h1 {
-        font-size: 2.1rem;
-    }
-    .profile-img {
-        width: 115px;
-        height: 115px;
-    }
-    .stats {
-        grid-template-columns: 1fr;
-    }
-    .card {
-        padding: 23px;
-    }
-    .timeline {
-        margin-left: 5px;
-        padding-left: 28px;
-    }
-    .timeline-dot {
-        left: -31px;
-    }
-    .timeline-content:hover {
-        transform: none;
-    }
-    .lang-btn {
-        top: 15px;
-        right: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 1.8rem;
-    }
-    .hero p {
-        font-size: 0.95rem;
-    }
-    .download-btn {
-        width: 100%;
-        max-width: 260px;
-    }
-    .skills span {
-        font-size: 0.9rem;
-    }
-}
+/* TIMELINE */
 
 .timeline-content {
     position: relative;
@@ -339,14 +290,6 @@ footer {
     font-weight: bold;
     backdrop-filter: blur(12px);
     box-shadow: 0 0 15px rgba(56, 189, 248, 0.55), 0 0 35px rgba(37, 99, 235, 0.25);
-}
-
-@media (max-width: 480px) {
-    .date-bubble {
-        position: static;
-        display: inline-block;
-        margin-bottom: 14px;
-    }
 }
 
 .flags {
@@ -463,4 +406,100 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 12px;
+}
+
+
+/* ==========================
+   MOBILE - AJUSTES CV
+========================== */
+
+@media (max-width: 768px) {
+    .card p,
+    .timeline-content p,
+    .skills-list li {
+        text-align: justify;
+        text-justify: inter-word;
+        line-height: 1.7;
+    }
+    .skills {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 9px;
+    }
+    .skills span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        min-height: 34px;
+        padding: 8px 6px;
+        font-size: 0.72rem;
+        white-space: normal;
+    }
+}
+
+@media (max-width: 380px) {
+    .skills {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 75px;
+    }
+    .hero h1 {
+        font-size: 2.1rem;
+    }
+    .profile-img {
+        width: 115px;
+        height: 115px;
+    }
+    .stats {
+        grid-template-columns: 1fr;
+    }
+    .card {
+        padding: 23px;
+    }
+    .timeline {
+        margin-left: 5px;
+        padding-left: 28px;
+    }
+    .timeline-dot {
+        left: -31px;
+    }
+    .timeline-content:hover {
+        transform: none;
+    }
+    .lang-btn {
+        top: 15px;
+        right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    .hero p {
+        font-size: 0.95rem;
+    }
+    .download-btn {
+        width: 100%;
+        max-width: 260px;
+    }
+    .skills span {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .date-bubble {
+        position: static;
+        display: inline-block;
+        margin-bottom: 14px;
+    }
 }
