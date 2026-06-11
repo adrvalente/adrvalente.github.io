@@ -9,32 +9,33 @@
     <link rel="stylesheet" href="css/index.css">
 <script>
 if (window.top !== window.self) {
-    document.addEventListener("DOMContentLoaded", () => {
+
+    try {
+        window.top.location = window.location.href;
+    } catch (e) {
+
         document.documentElement.innerHTML = `
             <head>
                 <title>Página bloqueada</title>
-                <style>
-                    body {
-                        margin: 0;
-                        height: 100vh;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        font-family: Arial, sans-serif;
-                        background: #0f172a;
-                        color: #e5e7eb;
-                        text-align: center;
-                    }
-                </style>
             </head>
-            <body>
-                <main>
+            <body style="
+                margin:0;
+                height:100vh;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                background:#0f172a;
+                color:#e5e7eb;
+                font-family:Arial,sans-serif;
+                text-align:center;
+            ">
+                <div>
                     <h1>🚫 Página bloqueada</h1>
                     <p>Esta página não pode ser apresentada dentro de um iframe.</p>
-                </main>
+                </div>
             </body>
         `;
-    });
+    }
 }
 </script>
     
