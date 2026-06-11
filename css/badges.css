@@ -1,6 +1,24 @@
+/* ==================================================
+   BADGES.CSS
+   Página de Badges e Certificados
+==================================================
+
+Objetivo:
+- Criar uma timeline horizontal de badges.
+- Mostrar certificados em modal.
+- Permitir preview de PDFs.
+- Manter o estilo visual do portfólio.
+================================================== */
+
+
+/* Reset simples para manter tamanhos previsíveis */
+
 * {
     box-sizing: border-box;
 }
+
+
+/* Estilo geral da página */
 
 body {
     margin: 0;
@@ -9,18 +27,476 @@ body {
     color: #e5e7eb;
 }
 
+
+/* Cabeçalho da página */
+
 header {
     text-align: center;
     padding: 50px 20px 25px;
 }
+
+
+/* Título principal */
 
 header h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
+
+/* Texto introdutório */
+
 header p {
     color: #94a3b8;
+}
+
+
+/* Container central da página */
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+
+/* Área geral da timeline */
+
+.timeline-wrapper {
+    position: relative;
+    margin-top: 0;
+    overflow: visible;
+}
+
+
+/* Carrossel horizontal */
+
+.timeline-carousel {
+    position: relative;
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-behavior: auto;
+    scroll-snap-type: none;
+    padding: 5px 0px 45px;
+    scrollbar-width: none;
+}
+
+
+/* Esconde a scrollbar em Chrome/Edge/Safari */
+
+.timeline-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Linha onde ficam os cards */
+
+.timeline-track {
+    position: relative;
+    display: flex;
+    gap: 30px;
+    width: max-content;
+    padding: 100px 20px 45px;
+}
+
+
+/* Linha colorida da timeline */
+
+.timeline-track::before {
+    content: "";
+    position: absolute;
+    top: 66px;
+    left: 135px;
+    right: 135px;
+    height: 4px;
+    background: linear-gradient(90deg, #2563eb, #38bdf8, #22c55e);
+    border-radius: 50px;
+    z-index: 0;
+}
+
+
+/* Card individual da badge */
+
+.timeline-card {
+    position: relative;
+    z-index: 1;
+    min-width: 230px;
+    max-width: 230px;
+    min-height: 260px;
+    background: #1e293b;
+    border-radius: 18px;
+    padding: 22px 18px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+    transition: transform 0.25s, box-shadow 0.25s, border 0.25s;
+    border: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+
+/* Efeito hover no card */
+
+.timeline-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(56, 189, 248, 0.2);
+    border: 1px solid #38bdf8;
+}
+
+
+/* Ponto da timeline por cima de cada card */
+
+.timeline-dot {
+    position: absolute;
+    top: -42px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: #38bdf8;
+    border-radius: 50%;
+    border: 4px solid #0f172a;
+    box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.25), 0 0 20px rgba(56, 189, 248, 0.4);
+    z-index: 10;
+}
+
+
+/* Label apresentada ao passar o rato */
+
+.timeline-label {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: #1e293b;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease;
+    border: 1px solid #38bdf8;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    pointer-events: none;
+}
+
+
+/* Pequena seta inferior da label */
+
+.timeline-label::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: #1e293b transparent transparent transparent;
+}
+
+
+/* Mostra a label no hover do card */
+
+.timeline-card:hover .timeline-label {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+
+/* Imagem da badge */
+
+.timeline-card img {
+    max-width: 125px;
+    height: 125px;
+    object-fit: contain;
+    margin-bottom: 18px;
+}
+
+
+/* Título da badge */
+
+.timeline-card h3 {
+    margin: 10px 0 0;
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1.3;
+}
+
+
+/* Setas visuais laterais do carrossel */
+.carousel-hint {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgba(56, 189, 248, 0.45);
+    pointer-events: none;
+    z-index: 20;
+    animation: pulse 2s infinite;
+}
+
+
+
+/* Seta esquerda */
+
+.carousel-hint.left {
+    left: -10px;
+}
+
+
+/* Seta direita */
+
+.carousel-hint.right {
+    right: -10px;
+}
+
+
+/* Animação das setas laterais */
+
+@keyframes pulse {
+    0%,
+    100% {
+        opacity: .3;
+    }
+    50% {
+        opacity: .8;
+    }
+}
+
+
+/* Gradientes laterais para dar sensação de continuidade */
+
+.timeline-wrapper::before,
+.timeline-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 80px;
+    z-index: 15;
+    pointer-events: none;
+}
+
+
+/* Fade do lado esquerdo */
+
+.timeline-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, #0f172a, transparent);
+}
+
+
+/* Fade do lado direito */
+
+.timeline-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, #0f172a, transparent);
+}
+
+
+/* Fundo escuro do modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(2, 6, 23, 0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    padding: 20px;
+}
+
+
+/* Caixa principal do modal */
+
+.modal-content {
+    position: relative;
+    background: #1e293b;
+    padding: 35px 30px;
+    border-radius: 22px;
+    max-width: 430px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    animation: abrirModal 0.25s ease;
+}
+
+
+/* Animação de abertura do modal */
+
+@keyframes abrirModal {
+    from {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* Imagem dentro do modal */
+
+.modal-content img {
+    max-width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 18px;
+}
+
+
+/* Título do modal */
+
+.modal-content h2 {
+    margin: 10px 0;
+    color: #ffffff;
+}
+
+
+/* Descrição do modal */
+
+.modal-content p {
+    color: #cbd5e1;
+    line-height: 1.5;
+}
+
+
+/* Link/botão dentro do modal */
+
+.modal-content a {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 10px 18px;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: background 0.2s, transform 0.2s;
+}
+
+
+/* Hover do botão do modal */
+
+.modal-content a:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+
+/* Botão de fechar modal */
+
+.close {
+    position: absolute;
+    top: 14px;
+    right: 20px;
+    font-size: 30px;
+    color: #94a3b8;
+    cursor: pointer;
+}
+
+
+/* Hover no botão fechar */
+
+.close:hover {
+    color: #ffffff;
+}
+
+
+/* Rodapé */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #64748b;
+}
+
+
+/* Ajustes para mobile */
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    .timeline-card {
+        min-width: 210px;
+        max-width: 210px;
+    }
+    .timeline-card img {
+        max-width: 110px;
+        height: 110px;
+    }
+    .timeline-track::before {
+        left: 125px;
+        right: 125px;
+    }
+}
+
+
+/* ==================================================
+   MODAL GRANDE PARA PREVIEW DE PDF
+================================================== */
+
+
+/* Modal maior usado para certificados em PDF */
+
+.modal-large {
+    max-width: 1000px;
+    width: 95%;
+    max-height: 92vh;
+    overflow-y: auto;
+}
+
+
+/* Preview do PDF dentro do modal */
+
+#modalPdf {
+    width: 100%;
+    height: 600px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 12px;
+    background: white;
+}
+
+
+/* Botão para abrir PDF numa nova aba */
+
+.pdf-button {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 10px 18px;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+
+/* Hover do botão PDF */
+
+.pdf-button:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+
+/* Altura menor do PDF em ecrãs pequenos */
+
+@media (max-width: 700px) {
+    #modalPdf {
+        height: 420px;
+    }
 }
 
 .container {
@@ -154,25 +630,6 @@ header p {
     line-height: 1.3;
 }
 
-.carousel-hint {
-    position: fixed;
-    top: 58%;
-    transform: translateY(-50%);
-    font-size: 3rem;
-    font-weight: bold;
-    color: rgba(56, 189, 248, 0.45);
-    pointer-events: none;
-    z-index: 50;
-    animation: pulse 2s infinite;
-}
-
-.carousel-hint.left {
-    left: 70px;
-}
-
-.carousel-hint.right {
-    right: 70px;
-}
 
 @keyframes pulse {
     0%,

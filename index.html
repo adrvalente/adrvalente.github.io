@@ -1,37 +1,189 @@
 <!DOCTYPE html>
+
+<!--
+==================================================
+Página Inicial (index.html)
+Portfolio Pessoal - Adriano Valente
+==================================================
+
+Objetivo:
+- Servir como página de entrada do portfólio.
+- Apresentar uma breve introdução ao visitante.
+- Redirecionar para a página principal do CV.
+- Adaptar automaticamente o idioma (PT/EN)
+  conforme o idioma do navegador.
+
+Autor: Adriano Valente
+==================================================
+-->
+
 <html lang="pt-PT">
 
 <head>
+
+    <!-- Configuração de codificação UTF-8 -->
     <meta charset="UTF-8">
+
+    <!-- Responsividade para dispositivos móveis -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título apresentado no separador do navegador -->
     <title>adrianovalente.pt</title>
 
+    <!-- Folha de estilos principal da página -->
     <link rel="stylesheet" href="css/index.css">
+
+    <!--
+==================================================
+PROTEÇÃO CONTRA IFRAMES (ANTI-CLICKJACKING)
+
+Objetivo:
+Impedir que a página seja carregada dentro
+de um iframe de outro website.
+
+Funcionamento:
+1. Verifica se a página está dentro de um iframe.
+2. Se estiver:
+   - Tenta redirecionar o utilizador para a página original.
+3. Caso o navegador bloqueie o redirecionamento:
+   - Substitui todo o conteúdo da página
+     por uma mensagem de bloqueio.
+
+Nota:
+No GitHub Pages não é possível configurar
+cabeçalhos HTTP como:
+- X-Frame-Options
+- Content-Security-Policy
+
+Esta solução fornece uma proteção básica
+contra clickjacking utilizando JavaScript.
+==================================================
+-->
+    <script>
+    if (window.top !== window.self) {
+
+        try {
+            window.top.location = window.location.href;
+        } catch (e) {
+
+            document.documentElement.innerHTML = `
+                <head>
+                    <title>Página bloqueada</title>
+                </head>
+                <body style="
+                    margin:0;
+                    height:100vh;
+                    display:flex;
+                    justify-content:center;
+                    align-items:center;
+                    background:#0f172a;
+                    color:#e5e7eb;
+                    font-family:Arial,sans-serif;
+                    text-align:center;
+                ">
+                    <div>
+                        <h1>🚫 Página bloqueada</h1>
+                        <p>Esta página não pode ser apresentada dentro de um iframe.</p>
+                    </div>
+                </body>
+            `;
+        }
+    }
+    </script>
+
 </head>
 
 <body>
 
+    <!--
+    ==================================================
+    FUNDOS ANIMADOS
+    ==================================================
+
+    Elementos visuais utilizados para criar efeitos
+    de profundidade e iluminação através do CSS.
+    -->
     <div class="background bg1"></div>
     <div class="background bg2"></div>
 
+    <!--
+    ==================================================
+    CONTEÚDO PRINCIPAL
+    ==================================================
+    -->
     <main class="container">
 
+        <!--
+        ==================================================
+        AVATAR COM EFEITO HOVER
+        ==================================================
 
+        avatar-main:
+        - Imagem padrão (GitHub Avatar)
+
+        avatar-hover:
+        - Imagem alternativa apresentada ao passar
+          o rato por cima do avatar.
+        -->
         <div class="avatar-wrapper">
+
             <img src="https://avatars.githubusercontent.com/u/286309621?v=4" class="avatar avatar-main" alt="Adriano Valente">
+
             <img src="imagens/me_blue.png" class="avatar avatar-hover" alt="Adriano Valente">
+
         </div>
-        <h1 data-pt="Adriano Valente" data-en="Adriano Valente">Adriano Valente</h1>
 
+        <!--
+        Nome principal apresentado na página.
+
+        data-pt:
+        Texto em Português
+
+        data-en:
+        Texto em Inglês
+        -->
+        <h1 data-pt="Adriano Valente" data-en="Adriano Valente">
+
+            Adriano Valente
+
+        </h1>
+
+        <!--
+        Mensagem principal / slogan profissional
+        -->
         <p data-pt="Transformando ideias em soluções digitais." data-en="Turning ideas into digital solutions.">
+
             Transformando ideias em soluções digitais.
+
         </p>
 
+        <!--
+        Descrição resumida do objetivo do portfólio
+        -->
         <p data-pt="Projetos, experiências e novos desafios em constante evolução." data-en="Projects, experience, and new challenges continuously evolving.">
+
             Projetos, experiências e novos desafios em constante evolução.
+
         </p>
 
-        <!--Botões de navegação para as páginas de CV, Projetos e Badges. Removidos temporariamente para destacar o status atual do site.
+        <!--
+        ==================================================
+        MENU DE NAVEGAÇÃO (DESATIVADO)
+        ==================================================
+
+        Esta secção foi temporariamente removida para
+        simplificar a página inicial.
+
+        Caso seja necessário voltar a ativar:
+
+        - CV
+        - Projetos
+        - Badges / Certificados
+
+        basta remover os comentários HTML.
+        -->
+
+        <!--
         <nav class="home-actions">
             <a href="cv.html" class="home-btn">CV</a>
             <a href="projects.html" class="home-btn">Projects</a>
@@ -39,26 +191,85 @@
         </nav>
         -->
 
+        <!--
+        ==================================================
+        BOTÃO PRINCIPAL
+        ==================================================
+
+        Direciona o visitante para a página do CV.
+
+        Inclui:
+        - Indicador visual (dot)
+        - Texto traduzido automaticamente
+        - Ícone de seta
+        -->
         <a href="cv.html" class="status-btn" title="Ver CV">
+
             <span class="dot"></span>
-            <span data-pt="Bem-vindo" data-en="Welcome">Bem-vindo</span>
+
+            <span data-pt="Bem-vindo" data-en="Welcome">
+
+                Bem-vindo
+
+            </span>
+
             <span class="arrow">→</span>
+
         </a>
 
     </main>
 
+    <!--
+    ==================================================
+    SCRIPT DE TRADUÇÃO AUTOMÁTICA
+    ==================================================
 
+    Deteta o idioma do navegador:
+
+    Português -> PT
+    Outros idiomas -> EN
+
+    Atualiza automaticamente todos os elementos
+    que possuam os atributos:
+
+    data-pt=""
+    data-en=""
+    -->
     <script>
-        const userLang = navigator.language || navigator.userLanguage;
-        const lang = userLang.startsWith("pt") ? "pt" : "en";
+        const userLang =
+            navigator.language ||
+            navigator.userLanguage;
 
-        document.querySelectorAll("[data-pt][data-en]").forEach(element => {
-            element.textContent = element.dataset[lang];
-        });
+        const lang =
+            userLang.startsWith("pt") ?
+            "pt" :
+            "en";
 
-        document.documentElement.lang = lang === "pt" ? "pt-PT" : "en";
+        document
+            .querySelectorAll("[data-pt][data-en]")
+            .forEach(element => {
+
+                element.textContent =
+                    element.dataset[lang];
+
+            });
+
+        document.documentElement.lang =
+            lang === "pt" ?
+            "pt-PT" :
+            "en";
     </script>
+
+    <!--
+    ==================================================
+    LANGUAGE.JS
+    ==================================================
+
+    Script global reutilizado em todas as páginas
+    do portfólio para gestão de traduções.
+    -->
     <script src="js/language.js"></script>
+
 </body>
 
 </html>

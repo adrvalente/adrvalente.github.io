@@ -2,297 +2,345 @@
 <html lang="pt-PT">
 
 <head>
+    <!-- Codificação da página -->
     <meta charset="UTF-8">
+
+    <!-- Título da página no navegador -->
     <title>adrianovalente.pt | Sobre Mim</title>
+
+    <!-- Responsividade para mobile/tablet -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- CSS específico da página CV -->
     <link rel="stylesheet" href="css/cv.css">
+
+    <!-- CSS global do menu/navbar -->
     <link rel="stylesheet" href="css/menu.css">
+
+    <!--
+==================================================
+PROTEÇÃO CONTRA IFRAMES (ANTI-CLICKJACKING)
+
+Objetivo:
+Impedir que a página seja carregada dentro
+de um iframe de outro website.
+
+Funcionamento:
+1. Verifica se a página está dentro de um iframe.
+2. Se estiver:
+   - Tenta redirecionar o utilizador para a página original.
+3. Caso o navegador bloqueie o redirecionamento:
+   - Substitui todo o conteúdo da página
+     por uma mensagem de bloqueio.
+
+Nota:
+No GitHub Pages não é possível configurar
+cabeçalhos HTTP como:
+- X-Frame-Options
+- Content-Security-Policy
+
+Esta solução fornece uma proteção básica
+contra clickjacking utilizando JavaScript.
+==================================================
+-->
+    <script>
+    if (window.top !== window.self) {
+
+        try {
+            window.top.location = window.location.href;
+        } catch (e) {
+
+            document.documentElement.innerHTML = `
+                <head>
+                    <title>Página bloqueada</title>
+                </head>
+                <body style="
+                    margin:0;
+                    height:100vh;
+                    display:flex;
+                    justify-content:center;
+                    align-items:center;
+                    background:#0f172a;
+                    color:#e5e7eb;
+                    font-family:Arial,sans-serif;
+                    text-align:center;
+                ">
+                    <div>
+                        <h1>🚫 Página bloqueada</h1>
+                        <p>Esta página não pode ser apresentada dentro de um iframe.</p>
+                    </div>
+                </body>
+            `;
+        }
+    }
+    </script>
+
 </head>
 
 <body>
+
+    <!-- Navbar carregada dinamicamente pelo navbar.js -->
     <div id="navbar"></div>
 
+    <!-- Cabeçalho principal da página -->
+    <header class="hero">
 
-
-    <header class=" hero ">
+        <!-- Avatar com imagem principal e imagem alternativa no hover -->
         <div class="avatar-wrapper">
             <img src="https://avatars.githubusercontent.com/u/286309621?v=4" class="avatar avatar-main" alt="Adriano Valente">
             <img src="imagens/me_blue.png" class="avatar avatar-hover" alt="Adriano Valente">
         </div>
-        <h1 data-pt="Adriano Valente " data-en="Adriano Valente ">
+
+        <!-- Nome principal com suporte PT/EN -->
+        <h1 data-pt="Adriano Valente" data-en="Adriano Valente">
             Adriano Valente
         </h1>
 
-        <p data-pt="IT Support • Quality Assurance • Programação • Dados " data-en="IT Support • Quality Assurance • Programming • Data ">
+        <!-- Subtítulo profissional com tradução automática -->
+        <p data-pt="IT Support • Quality Assurance • Programação • Dados" data-en="IT Support • Quality Assurance • Programming • Data">
             IT Support • Quality Assurance • Programação • Dados
         </p>
 
+        <!-- Botão para download/abertura do CV -->
         <a id="cv-download" href="docs/CV_Adriano_Valente_PT.pdf" target="_blank" class="download-btn" data-pt="📄 Download CV (PT)" data-en="📄 Download Resume (EN)">
-    📄 Download CV (PT)
-</a>
+            📄 Download CV (PT)
+        </a>
 
     </header>
 
-    <main class="container ">
+    <!-- Conteúdo principal -->
+    <main class="container">
 
-        <section class="stats ">
+        <!-- Secção de estatísticas rápidas -->
+        <section class="stats">
 
-            <div class="stat-card ">
+            <!-- Card estatístico -->
+            <div class="stat-card">
                 <h2>12+</h2>
-                <p data-pt="Áreas técnicas " data-en="Technical areas ">
+                <p data-pt="Áreas técnicas" data-en="Technical areas">
                     Áreas técnicas
                 </p>
             </div>
 
-            <div class="stat-card ">
+            <div class="stat-card">
                 <h2>10+</h2>
-                <p data-pt="Projetos Académicos e Pessoais " data-en="Academic and Personal Projects ">
+                <p data-pt="Projetos Académicos e Pessoais" data-en="Academic and Personal Projects">
                     Projetos Académicos e Pessoais
                 </p>
             </div>
 
-            <div class="stat-card ">
+            <div class="stat-card">
                 <h2>20+</h2>
-                <p data-pt="Certificados e badges " data-en="Certificates and badges ">
+                <p data-pt="Certificados e badges" data-en="Certificates and badges">
                     Certificados e badges
                 </p>
             </div>
 
-            <div class="stat-card ">
+            <div class="stat-card">
                 <h2>8+</h2>
-                <p data-pt="Anos de Voluntário " data-en="Years of Volunteering ">
+                <p data-pt="Anos de Voluntário" data-en="Years of Volunteering">
                     Anos de Voluntário
                 </p>
             </div>
 
-            <div class="stat-card ">
+            <div class="stat-card">
                 <h2>4</h2>
-                <p data-pt="Percursos formativos " data-en="Training Courses ">
+                <p data-pt="Percursos formativos" data-en="Training Courses">
                     Percursos formativos
                 </p>
             </div>
 
-            <div class="stat-card ">
+            <!-- Card de idiomas -->
+            <div class="stat-card">
                 <h2>4+</h2>
 
-                <div class="flags ">
-
-                    <div class="flag-item ">
-                        <img src="imagens/flag_pt.webp " alt="Português ">
-                        <span class="level-circle ">C2</span>
+                <!-- Lista de idiomas com bandeiras e nível -->
+                <div class="flags">
+                    <div class="flag-item">
+                        <img src="imagens/flag_pt.webp" alt="Português">
+                        <span class="level-circle">C2</span>
                     </div>
 
-                    <div class="flag-item ">
-                        <img src="imagens/flag_gb.webp " alt="English ">
-                        <span class="level-circle ">C2</span>
+                    <div class="flag-item">
+                        <img src="imagens/flag_gb.webp" alt="English">
+                        <span class="level-circle">C2</span>
                     </div>
 
-                    <div class="flag-item ">
-                        <img src="imagens/flag_fr.webp " alt="Français ">
-                        <span class="level-circle ">B1</span>
+                    <div class="flag-item">
+                        <img src="imagens/flag_fr.webp" alt="Français">
+                        <span class="level-circle">B1</span>
                     </div>
 
-                    <div class="flag-item ">
-                        <img src="imagens/flag_es.png " alt="Español ">
-                        <span class="level-circle ">A2</span>
+                    <div class="flag-item">
+                        <img src="imagens/flag_es.png" alt="Español">
+                        <span class="level-circle">A2</span>
                     </div>
-
                 </div>
             </div>
         </section>
 
-        <section class="card ">
+        <!-- Secção de perfil profissional -->
+        <section class="card">
 
-            <h2 data-pt="Perfil Profissional " data-en="Professional Profile ">
+            <h2 data-pt="Perfil Profissional" data-en="Professional Profile">
                 Perfil Profissional
             </h2>
 
+            <!-- Texto principal do perfil com versão PT/EN -->
             <p data-pt="Profissional de Tecnologias de Informação com experiência em IT Support e Quality Assurance, atualmente em processo de especialização nas áreas de Programação, Sistemas de Informação e Ciência dos Dados. Frequenta o CET de Técnico Especialista em Tecnologias e Programação de Sistemas de Informação, complementado por um processo de RVCC em Gestão de Informação e Ciência dos Dados. Possui experiência prática em desenvolvimento de aplicações, bases de dados, análise e transformação de dados, procurando criar soluções tecnológicas que simplifiquem processos e apoiem a tomada de decisão baseada em informação."
-                data-en="Information Technology professional with a background in IT Support and Quality Assurance, currently expanding expertise in Software Development, Information Systems, and Data Analytics. Pursuing a Higher Technical Course (CET) in Information Systems and Programming Technologies, alongside a Recognition, Validation and Certification of Competencies (RVCC) process in Information Management and Data Science.
-
-Hands-on experience in application development, database design, data analysis, ETL processes, and web technologies, gained through both academic projects and practical implementations. Passionate about leveraging technology to solve problems, optimize processes, and transform data into actionable insights that support business decision-making.
-
-Recognized for strong analytical thinking, adaptability, continuous learning, and a proactive approach to delivering efficient and reliable solutions.
-">
-                Profissional de Tecnologias de Informação com experiência em IT Support e Quality Assurance, atualmente em processo de especialização nas áreas de Programação, Sistemas de Informação e Ciência dos Dados. Frequenta o CET de Técnico Especialista em Tecnologias
-                e Programação de Sistemas de Informação, complementado por um processo de RVCC em Gestão de Informação e Ciência dos Dados. Possui experiência prática em desenvolvimento de aplicações, bases de dados, análise e transformação de dados,
-                procurando criar soluções tecnológicas que simplifiquem processos e apoiem a tomada de decisão baseada em informação.
+                data-en="Information Technology professional with a background in IT Support and Quality Assurance, currently expanding expertise in Software Development, Information Systems, and Data Analytics. Pursuing a Higher Technical Course (CET) in Information Systems and Programming Technologies, alongside a Recognition, Validation and Certification of Competencies (RVCC) process in Information Management and Data Science. Hands-on experience in application development, database design, data analysis, ETL processes, and web technologies, gained through both academic projects and practical implementations. Passionate about leveraging technology to solve problems, optimize processes, and transform data into actionable insights that support business decision-making. Recognized for strong analytical thinking, adaptability, continuous learning, and a proactive approach to delivering efficient and reliable solutions.">
+                Profissional de Tecnologias de Informação com experiência em IT Support e Quality Assurance, atualmente em processo de especialização nas áreas de Programação, Sistemas de Informação e Ciência dos Dados.
             </p>
 
         </section>
 
-        <section class="card ">
+        <!-- Secção de competências técnicas -->
+        <section class="card">
 
-            <h2 data-pt="Competências Técnicas " data-en="Technical Skills ">
+            <h2 data-pt="Competências Técnicas" data-en="Technical Skills">
                 Competências Técnicas
             </h2>
 
+            <!-- Lista visual de tecnologias e competências -->
             <div class="skills">
-
                 <span>🐍 Python</span>
                 <span>☕ Java</span>
                 <span>⚡ C</span>
-
                 <span>🌐 HTML5</span>
                 <span>🎨 CSS3</span>
                 <span>⚙️ JavaScript</span>
                 <span>🔥 Flask</span>
-
                 <span>🗄️ SQL</span>
                 <span>💾 SQLite</span>
                 <span>🐬 MariaDB</span>
                 <span>📊 Database Design</span>
-
                 <span>📈 Data Analysis</span>
                 <span>📊 ETL</span>
                 <span>📉 Data Visualization</span>
                 <span>📋 Power BI</span>
-
                 <span>🧪 Quality Assurance</span>
                 <span>✔️ Software Testing</span>
-
                 <span>🐧 Linux</span>
                 <span>🪟 Windows</span>
                 <span>🖥️ Windows Server</span>
                 <span>🍎 macOS</span>
-
                 <span>🔧 Git</span>
                 <span>🐙 GitHub</span>
                 <span>📦 VirtualBox</span>
                 <span>☁️ APIs</span>
-
                 <span>📡 TCP/IP Networking</span>
                 <span>🔐 SSH</span>
                 <span>🌍 LAMP Stack</span>
-
                 <span>🎯 OpenSCAD</span>
                 <span>📑 Excel Advanced</span>
-
             </div>
-            <!-- 
-            <div class="skills ">
-                <span>🐍 Python</span>
-                <span>☕ Java</span>
-                <span>🗄️ SQL</span>
-                <span>🌐 HTML</span>
-                <span>🎨 CSS</span>
-                <span>⚙️ JavaScript</span>
-                <span>🔥 Flask</span>
-                <span>📊 ETL</span>
-                <span>🐧 Linux</span>
-                <span>🖥️ Windows</span>
-                <span>🖥️ Windows Server</span>
-                <span>🍎 macOS</span>
-                <span>🔧 Git</span>
-                <span>🧪 QA</span>
-                <span>💾 SQLite</span>
-            </div> -->
 
         </section>
 
-        <section class="timeline-section ">
+        <!-- Secção da timeline / percurso -->
+        <section class="timeline-section">
 
-            <h2 data-pt="Percurso " data-en="Timeline ">
+            <h2 data-pt="Percurso" data-en="Timeline">
                 Percurso
             </h2>
 
-            <div class="timeline ">
+            <!-- Linha temporal -->
+            <div class="timeline">
 
-                <div class="timeline-item ">
-                    <div class="timeline-dot "></div>
+                <!-- Item da timeline: CET -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
 
-                    <div class="timeline-content ">
-                        <div class="date-bubble ">2025 - Atual</div>
+                    <div class="timeline-content">
+                        <div class="date-bubble">2025 - Atual</div>
+
                         <h3 data-pt="CET TPSI @ ISLA" data-en="CET TPSI @ ISLA">
                             CET TPSI @ ISLA
                         </h3>
 
-                        <span data-pt="CET - Tecnologias e Programação de Sistemas de Informação " data-en="Higher Technical Course (CET) in Information Systems and Programming Technologies">
+                        <span data-pt="CET - Tecnologias e Programação de Sistemas de Informação" data-en="Higher Technical Course (CET) in Information Systems and Programming Technologies">
                             CET - Tecnologias e Programação de Sistemas de Informação
                         </span>
 
                         <p data-pt="Curso de especialização tecnológica focado no desenvolvimento de software, bases de dados, sistemas de informação e análise de dados. Formação prática em linguagens de programação, desenvolvimento web, modelação e gestão de bases de dados, ETL, visualização de dados e administração de sistemas, complementada pela realização de projetos tecnológicos em contexto real."
                             data-en="Advanced technical program focused on software development, data management, and information systems. Developing practical skills in Python, Java, SQL, web technologies, database design, ETL processes, data analytics, and business-oriented technology solutions through hands-on projects and collaborative learning environments.">
-                            Curso de especialização tecnológica focado no desenvolvimento de software, bases de dados, sistemas de informação e análise de dados. Formação prática em linguagens de programação, desenvolvimento web, modelação e gestão de bases de dados, ETL, visualização
-                            de dados e administração de sistemas, complementada pela realização de projetos tecnológicos em contexto real.
+                            Curso de especialização tecnológica focado no desenvolvimento de software, bases de dados, sistemas de informação e análise de dados.
                         </p>
-                    </div>
-
-                    <div class="timeline-item ">
-                        <div class="timeline-dot "></div>
-
-                        <div class="timeline-content ">
-
-                            <div class="date-bubble ">2025 - Atual</div>
-
-                            <h3 data-pt="RVCC - Ciência dos Dados @ IEFP" data-en="RVCC - Data Science @ IEFP">
-                                RVCC - Ciência dos Dados @ IEFP
-                            </h3>
-
-                            <span data-pt="Processo de certificação de competências centrado na gestão, análise e transformação de dados, suportado pelo desenvolvimento de projetos práticos e documentação técnica. Aplicação de metodologias de ETL, modelação e gestão de bases de dados, análise exploratória, visualização de dados e implementação de soluções tecnológicas para otimização de processos e suporte à tomada de decisão baseada em informação."
-                                data-en="Competency-based certification program focused on data management, analytics, and business intelligence. Demonstrates hands-on experience in database design, ETL workflows, data transformation, exploratory data analysis, data visualization, and the development of data-driven solutions to improve operational efficiency and support informed decision-making.">
-            Processo de certificação de competências centrado na gestão, análise e transformação de dados, suportado pelo desenvolvimento de projetos práticos e documentação técnica. Aplicação de metodologias de ETL, modelação e gestão de bases de dados, análise exploratória, visualização de dados e implementação de soluções tecnológicas para otimização de processos e suporte à tomada de decisão baseada em informação.
-        </span>
-
-                            <p data-pt="Desenvolvimento de um portefólio técnico baseado em projetos reais nas áreas de análise de dados, ETL, bases de dados, visualização de informação e gestão de informação, alinhado com o referencial de Técnico Especialista
-                em Gestão de Informação e Ciência dos Dados. " data-en="Development of a technical portfolio based on real-world projects in data analysis, ETL, databases, information visualization and information management, aligned with the Specialist Technician in Information
-                Management and Data Science framework. ">
-                                Desenvolvimento de um portefólio técnico baseado em projetos reais nas áreas de análise de dados, ETL, bases de dados, visualização de informação e gestão de informação, alinhado com o referencial de Técnico Especialista em Gestão de Informação e Ciência
-                                dos Dados.
-                            </p>
-
-                        </div>
                     </div>
                 </div>
 
-                <div class="timeline-item ">
-                    <div class="timeline-dot "></div>
+                <!-- Item da timeline: RVCC -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
 
-                    <div class="timeline-content ">
-                        <div class="date-bubble ">2022 - 2024</div>
-                        <h3 data-pt="IT Support @ Pixelmatters" data-en="IT Support ">
+                    <div class="timeline-content">
+                        <div class="date-bubble">2025 - Atual</div>
+
+                        <h3 data-pt="RVCC - Ciência dos Dados @ IEFP" data-en="RVCC - Data Science @ IEFP">
+                            RVCC - Ciência dos Dados @ IEFP
+                        </h3>
+
+                        <span data-pt="Processo de certificação de competências centrado na gestão, análise e transformação de dados, suportado pelo desenvolvimento de projetos práticos e documentação técnica." data-en="Competency-based certification program focused on data management, analytics, and business intelligence.">
+                            Processo de certificação de competências centrado na gestão, análise e transformação de dados.
+                        </span>
+
+                        <p data-pt="Desenvolvimento de um portefólio técnico baseado em projetos reais nas áreas de análise de dados, ETL, bases de dados, visualização de informação e gestão de informação, alinhado com o referencial de Técnico Especialista em Gestão de Informação e Ciência dos Dados."
+                            data-en="Development of a technical portfolio based on real-world projects in data analysis, ETL, databases, information visualization and information management, aligned with the Specialist Technician in Information Management and Data Science framework.">
+                            Desenvolvimento de um portefólio técnico baseado em projetos reais nas áreas de análise de dados, ETL, bases de dados e visualização de informação.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item da timeline: IT Support -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-content">
+                        <div class="date-bubble">2022 - 2024</div>
+
+                        <h3 data-pt="IT Support @ Pixelmatters" data-en="IT Support">
                             IT Support @ Pixelmatters
                         </h3>
 
-                        <span data-pt="Experiência profissional " data-en="Professional experience ">
+                        <span data-pt="Experiência profissional" data-en="Professional experience">
                             Experiência profissional
                         </span>
 
-                        <p data-pt="Responsável pelo suporte tecnológico a equipas internas num ambiente digital e colaborativo, assegurando a disponibilidade e o desempenho dos recursos informáticos utilizados no dia a dia. Experiência na resolução de incidentes técnicos, gestão de equipamentos, apoio a utilizadores e implementação de melhorias operacionais. Desenvolveu uma forte capacidade analítica, de diagnóstico e resolução de problemas, trabalhando em proximidade com diferentes áreas da organização para garantir uma experiência tecnológica eficiente e de elevada qualidade."
-                            data-en="Provided technical support to internal teams, ensuring the reliability and efficiency of hardware, software, and workplace technologies. Responsible for troubleshooting technical issues, user support, device configuration, account management, and onboarding activities. Worked closely with cross-functional teams to improve operational processes, enhance user experience, and maintain a high standard of IT service delivery.">
-                            Responsável pelo suporte tecnológico a equipas internas num ambiente digital e colaborativo, assegurando a disponibilidade e o desempenho dos recursos informáticos utilizados no dia a dia. Experiência na resolução de incidentes técnicos, gestão de equipamentos,
-                            apoio a utilizadores e implementação de melhorias operacionais. Desenvolveu uma forte capacidade analítica, de diagnóstico e resolução de problemas, trabalhando em proximidade com diferentes áreas da organização para garantir
-                            uma experiência tecnológica eficiente e de elevada qualidade.
+                        <p data-pt="Responsável pelo suporte tecnológico a equipas internas num ambiente digital e colaborativo, assegurando a disponibilidade e o desempenho dos recursos informáticos utilizados no dia a dia." data-en="Provided technical support to internal teams, ensuring the reliability and efficiency of hardware, software, and workplace technologies.">
+                            Responsável pelo suporte tecnológico a equipas internas num ambiente digital e colaborativo.
                         </p>
                     </div>
                 </div>
 
-                <div class="timeline-item ">
-                    <div class="timeline-dot "></div>
+                <!-- Item da timeline: Quality Assurance -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
 
-                    <div class="timeline-content ">
-                        <div class="date-bubble ">2022 - 2023</div>
-                        <h3 data-pt="Quality Assurance " data-en="Quality Assurance ">
+                    <div class="timeline-content">
+                        <div class="date-bubble">2022 - 2023</div>
+
+                        <h3 data-pt="Quality Assurance" data-en="Quality Assurance">
                             Quality Assurance
                         </h3>
 
-                        <span data-pt="Academia de Formação QA  @ Rumos" data-en="QA Training Academy @ Rumos">
+                        <span data-pt="Academia de Formação QA @ Rumos" data-en="QA Training Academy @ Rumos">
                             Academia de Formação QA @ Rumos
                         </span>
 
-                        <p data-pt="Testes funcionais, validação de software, reporte de bugs e foco na melhoria contínua da qualidade. " data-en="Functional testing, software validation, bug reporting and focus on continuous quality improvement. ">
+                        <p data-pt="Testes funcionais, validação de software, reporte de bugs e foco na melhoria contínua da qualidade." data-en="Functional testing, software validation, bug reporting and focus on continuous quality improvement.">
                             Testes funcionais, validação de software, reporte de bugs e foco na melhoria contínua da qualidade.
                         </p>
                     </div>
                 </div>
 
-                <div class="timeline-item ">
-                    <div class="timeline-dot "></div>
+                <!-- Item da timeline: CNE -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
 
-                    <div class="timeline-content ">
-                        <div class="date-bubble ">2022 - Atual</div>
-                        <h3 data-pt="Voluntariado " data-en="Volunteering ">
+                    <div class="timeline-content">
+                        <div class="date-bubble">2022 - Atual</div>
+
+                        <h3 data-pt="Voluntariado" data-en="Volunteering">
                             Voluntariado
                         </h3>
 
@@ -300,68 +348,69 @@ Recognized for strong analytical thinking, adaptability, continuous learning, an
                             Dirigente Voluntário | Corpo Nacional de Escutas (CNE) – Agrupamento 676 Cristo-Rei
                         </span>
 
-                        <p data-pt="Exercício de funções de liderança e coordenação em contexto associativo, com responsabilidade pelo planeamento de atividades, gestão de equipas e organização de projetos educativos. Desenvolvimento de competências transversais de gestão, comunicação, tomada de decisão, resolução de problemas e trabalho colaborativo, aplicadas na coordenação de eventos, formação de jovens e dinamização de iniciativas comunitárias."
-                            data-en="Responsible for mentoring and supporting the personal development of young people through non-formal education activities. Planning and coordinating events, leading teams, managing resources, and promoting teamwork, responsibility, and community engagement. Developed strong leadership, communication, project management, and problem-solving skills through the organization of educational and community-focused initiatives.">
-                            Exercício de funções de liderança e coordenação em contexto associativo, com responsabilidade pelo planeamento de atividades, gestão de equipas e organização de projetos educativos. Desenvolvimento de competências transversais de gestão, comunicação,
-                            tomada de decisão, resolução de problemas e trabalho colaborativo, aplicadas na coordenação de eventos, formação de jovens e dinamização de iniciativas comunitárias.
+                        <p data-pt="Exercício de funções de liderança e coordenação em contexto associativo, com responsabilidade pelo planeamento de atividades, gestão de equipas e organização de projetos educativos." data-en="Responsible for mentoring and supporting the personal development of young people through non-formal education activities.">
+                            Exercício de funções de liderança e coordenação em contexto associativo.
                         </p>
                     </div>
+                </div>
 
-                    <div class="timeline-item ">
-                        <div class="timeline-dot "></div>
+                <!-- Item da timeline: Cruz Vermelha -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
 
-                        <div class="timeline-content ">
-                            <div class="date-bubble ">2008 - 2010</div>
-                            <h3 data-pt="Voluntariado " data-en="Volunteering ">
-                                Voluntariado
-                            </h3>
+                    <div class="timeline-content">
+                        <div class="date-bubble">2008 - 2010</div>
 
-                            <span data-pt="Cruz Vermelha Portuguesa @ Porto " data-en="Red Cross @ Porto ">
-                            Cruz Vermelha Portuguesa @ Porto 
+                        <h3 data-pt="Voluntariado" data-en="Volunteering">
+                            Voluntariado
+                        </h3>
+
+                        <span data-pt="Cruz Vermelha Portuguesa @ Porto" data-en="Red Cross @ Porto">
+                            Cruz Vermelha Portuguesa @ Porto
                         </span>
 
-                            <p data-pt="articipação em operações de transporte e apoio a doentes, assegurando elevados padrões de segurança, cuidado e profissionalismo. Colaboração com equipas de emergência e assistência social, contribuindo para a prestação de apoio à comunidade em diferentes contextos. Experiência no trabalho sob pressão, gestão de prioridades, comunicação eficaz e cumprimento de procedimentos operacionais, reforçando competências de responsabilidade, resiliência e orientação para o serviço."
-                                data-en="Provided patient transport and support services, ensuring safety, comfort, and well-being throughout the transport process. Worked alongside healthcare and emergency response teams in community assistance and patient care operations. Developed strong teamwork, communication, decision-making, adaptability, and stress-management skills while maintaining a high level of professionalism and commitment to public service.">
-                                articipação em operações de transporte e apoio a doentes, assegurando elevados padrões de segurança, cuidado e profissionalismo. Colaboração com equipas de emergência e assistência social, contribuindo para a prestação de apoio à comunidade em diferentes
-                                contextos. Experiência no trabalho sob pressão, gestão de prioridades, comunicação eficaz e cumprimento de procedimentos operacionais, reforçando competências de responsabilidade, resiliência e orientação para o serviço.
-                            </p>
-                        </div>
-
-                        <div class="timeline-item ">
-                            <div class="timeline-dot "></div>
-
-                            <div class="timeline-content ">
-                                <div class="date-bubble ">2006 - 2008</div>
-                                <h3 data-pt="Voluntariado " data-en="Volunteering ">
-                                    Voluntariado
-                                </h3>
-
-                                <span data-pt="Bombeiro Voluntário | Associação Humanitária dos Bombeiros Voluntários de Coimbrões" data-en="Coimbrões Volunteer Fire Department">
-                                    Bombeiro Voluntário | Associação Humanitária dos Bombeiros Voluntários de Coimbrões
-                                </span>
-
-                                <p data-pt="Atuação em serviços de emergência pré-hospitalar e transporte de doentes, assegurando uma resposta rápida, segura e eficiente em situações de urgência. Colaboração com equipas de emergência e proteção civil, aplicando procedimentos operacionais e boas práticas de segurança. Desenvolvimento de competências de liderança situacional, gestão de prioridades, comunicação sob pressão e tomada de decisão em ambientes exigentes e de elevada responsabilidade."
-                                    data-en="Provided pre-hospital emergency assistance and patient transport, ensuring safe and efficient care in accordance with operational and safety procedures. Worked closely with emergency response teams in high-pressure environments, developing strong teamwork, communication, problem-solving, and decision-making skills while serving the community.">
-                                    Atuação em serviços de emergência pré-hospitalar e transporte de doentes, assegurando uma resposta rápida, segura e eficiente em situações de urgência. Colaboração com equipas de emergência e proteção civil, aplicando procedimentos operacionais e boas
-                                    práticas de segurança. Desenvolvimento de competências de liderança situacional, gestão de prioridades, comunicação sob pressão e tomada de decisão em ambientes exigentes e de elevada responsabilidade.
-                                </p>
-                            </div>
-                        </div>
-
+                        <p data-pt="Participação em operações de transporte e apoio a doentes, assegurando elevados padrões de segurança, cuidado e profissionalismo." data-en="Provided patient transport and support services, ensuring safety, comfort, and well-being throughout the transport process.">
+                            Participação em operações de transporte e apoio a doentes.
+                        </p>
                     </div>
+                </div>
 
+                <!-- Item da timeline: Bombeiros -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-content">
+                        <div class="date-bubble">2006 - 2008</div>
+
+                        <h3 data-pt="Voluntariado" data-en="Volunteering">
+                            Voluntariado
+                        </h3>
+
+                        <span data-pt="Bombeiro Voluntário | Associação Humanitária dos Bombeiros Voluntários de Coimbrões" data-en="Coimbrões Volunteer Fire Department">
+                            Bombeiro Voluntário | Associação Humanitária dos Bombeiros Voluntários de Coimbrões
+                        </span>
+
+                        <p data-pt="Atuação em serviços de emergência pré-hospitalar e transporte de doentes, assegurando uma resposta rápida, segura e eficiente em situações de urgência." data-en="Provided pre-hospital emergency assistance and patient transport, ensuring safe and efficient care in accordance with operational and safety procedures.">
+                            Atuação em serviços de emergência pré-hospitalar e transporte de doentes.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
         </section>
 
-        <section class="card contact-card ">
+        <!-- Secção de contacto -->
+        <section class="card contact-card">
 
-            <h2 data-pt="Contacto" data-en="Contact ">
+            <h2 data-pt="Contacto" data-en="Contact">
                 Contacto
             </h2>
 
-            <p data-pt="Disponível para projetos, colaboração e oportunidades na área tecnológica. " data-en="Available for projects, collaboration and opportunities in technology. ">
+            <p data-pt="Disponível para projetos, colaboração e oportunidades na área tecnológica." data-en="Available for projects, collaboration and opportunities in technology.">
                 Disponível para projetos, colaboração e oportunidades na área tecnológica.
             </p>
 
+            <!-- Link para a página de contacto -->
             <div class="contact-links">
                 <a href="contacto.html">Envia uma mensagem</a>
             </div>
@@ -370,12 +419,17 @@ Recognized for strong analytical thinking, adaptability, continuous learning, an
 
     </main>
 
+    <!-- Rodapé da página -->
     <footer>
         © 2026 adrvalente · GitHub Portfolio
     </footer>
 
+    <!-- Script que injeta a navbar -->
     <script src="js/navbar.js"></script>
+
+    <!-- Script responsável pela tradução automática PT/EN -->
     <script src="js/language.js"></script>
+
 </body>
 
 </html>

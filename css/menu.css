@@ -1,10 +1,42 @@
-/* ==========================
-   NAVBAR
-========================== */
+/* ==================================================
+   MENU.CSS
+   Navbar Global do Portfólio
+==================================================
+
+Objetivo:
+- Fornecer uma navbar reutilizável para todas
+  as páginas do portfólio.
+- Suportar versão desktop e mobile.
+- Colapsar automaticamente ao fazer scroll.
+- Integrar seleção de idioma PT/EN.
+================================================== */
+
+
+/* ==================================================
+   ESPAÇO SUPERIOR DA PÁGINA
+==================================================
+
+Compensa a navbar fixa para que o conteúdo
+não fique escondido por trás da mesma.
+*/
 
 body {
     padding-top: 100px;
 }
+
+
+/* ==================================================
+   NAVBAR PRINCIPAL
+==================================================
+
+Barra de navegação fixa no topo da página.
+
+Características:
+- Glassmorphism
+- Blur de fundo
+- Centrada horizontalmente
+- Responsiva
+*/
 
 .navbar {
     position: fixed;
@@ -28,9 +60,12 @@ body {
 }
 
 
-/* ==========================
-   BOTÃO PT / EN
-========================== */
+/* ==================================================
+   BOTÃO DE IDIOMA (PT / EN)
+==================================================
+
+Permite alternar entre Português e Inglês.
+*/
 
 .nav-lang {
     display: flex;
@@ -40,6 +75,9 @@ body {
     order: 1;
     transition: all 0.35s ease;
 }
+
+
+/* Botão visual de idioma */
 
 .lang-btn {
     position: static;
@@ -55,15 +93,30 @@ body {
     transition: 0.3s ease;
 }
 
+
+/* Hover do botão */
+
 .lang-btn:hover {
     background: rgba(37, 99, 235, 0.9);
     box-shadow: 0 0 18px rgba(37, 99, 235, 0.45);
 }
 
 
-/* ==========================
-   LINKS
-========================== */
+/* ==================================================
+   LINKS DE NAVEGAÇÃO
+==================================================
+
+Contém os links para:
+
+- Sobre Mim
+- Projetos
+- Badges
+- Contacto
+
+Cada link contém:
+- Emoji/Icone
+- Texto
+*/
 
 .nav-links {
     display: flex;
@@ -73,6 +126,9 @@ body {
     order: 2;
     transition: gap 0.35s ease;
 }
+
+
+/* Link individual */
 
 .nav-links a {
     display: flex;
@@ -87,10 +143,16 @@ body {
     transition: all 0.3s ease;
 }
 
+
+/* Hover dos links */
+
 .nav-links a:hover {
     background: rgba(96, 165, 250, 0.15);
     color: #60a5fa;
 }
+
+
+/* Página ativa */
 
 .nav-links a.active {
     background: #2563eb;
@@ -98,15 +160,28 @@ body {
     box-shadow: 0 0 20px rgba(37, 99, 235, 0.5);
 }
 
+
+/* Transições dos ícones e texto */
+
 .nav-icon,
 .nav-text {
     transition: all 0.3s ease;
 }
 
 
-/* ==========================
-   NAVBAR COLAPSADA
-========================== */
+/* ==================================================
+   NAVBAR COLAPSADA (SCROLL)
+==================================================
+
+Estado ativado através da classe:
+
+.navbar.scrolled
+
+Objetivo:
+- Ocupar menos espaço
+- Mostrar apenas os ícones
+- Esconder o seletor de idioma
+*/
 
 .navbar.scrolled {
     top: 8px;
@@ -123,6 +198,9 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
+
+/* Esconde o seletor de idioma */
+
 .navbar.scrolled .nav-lang {
     width: 0;
     opacity: 0;
@@ -132,9 +210,15 @@ body {
     pointer-events: none;
 }
 
+
+/* Reduz o espaçamento dos links */
+
 .navbar.scrolled .nav-links {
     gap: 8px;
 }
+
+
+/* Links passam a ícones circulares */
 
 .navbar.scrolled .nav-links a {
     width: 42px;
@@ -144,6 +228,9 @@ body {
     align-items: center;
 }
 
+
+/* Esconde o texto dos links */
+
 .navbar.scrolled .nav-text {
     opacity: 0;
     width: 0;
@@ -151,19 +238,25 @@ body {
     display: inline-block;
 }
 
+
+/* Aumenta ligeiramente os ícones */
+
 .navbar.scrolled .nav-icon {
     font-size: 1.1rem;
 }
 
 
-/* ==========================
-   RESPONSIVO
-========================== */
+/* ==================================================
+   RESPONSIVO MOBILE
+==================================================
 
+Ativado para larguras inferiores a 768px.
 
-/* ==========================
-   MOBILE VIEW
-========================== */
+Alterações:
+- Navbar mais compacta
+- Apenas ícones visíveis
+- Menos espaçamento
+*/
 
 @media (max-width: 768px) {
     body {
@@ -187,6 +280,7 @@ body {
         padding: 8px 10px;
         border-radius: 12px;
     }
+    /* Esconde texto e mostra apenas emojis */
     .nav-text {
         display: none;
     }
@@ -203,40 +297,25 @@ body {
 }
 
 
-/* @media (max-width: 768px) {
-    body {
-        padding-top: 180px;
-    }
-    .navbar {
-        width: 90%;
-        padding: 15px;
-        flex-direction: column;
-        gap: 15px;
-    }
-    .nav-lang {
-        justify-content: center;
-        width: 100%;
-    }
-    .nav-links {
-        flex-direction: column;
-        width: 100%;
-        gap: 10px;
-    }
-    .nav-links a {
-        width: 100%;
-        justify-content: center;
-        text-align: center;
-    }
-    .navbar.scrolled {
-        left: 50%;
-        transform: translateX(-50%);
-        width: 90%;
-        padding: 12px;
-        border-radius: 18px;
-    }
-    .navbar.scrolled .nav-lang {
-        display: none;
-    }
-}
+/* ==================================================
+   VERSÃO MOBILE ANTIGA
+==================================================
 
+Mantida apenas para referência futura.
+
+Utilizava:
+- Navbar vertical
+- Links empilhados
+- Layout tipo menu hambúrguer
+
+Atualmente desativada.
+================================================== */
+
+
+/*
+@media (max-width: 768px) {
+
+    ...
+
+}
 */

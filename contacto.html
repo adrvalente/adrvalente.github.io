@@ -2,49 +2,128 @@
 <html lang="pt-PT">
 
 <head>
+    <!-- Codificação da página -->
     <meta charset="UTF-8">
+
+    <!-- Título apresentado no separador do navegador -->
     <title>adrianovalente.pt | Contactos</title>
+
+    <!-- Responsividade para mobile/tablet -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- CSS específico da página de contacto -->
     <link rel="stylesheet" href="css/contacto.css">
+
+    <!-- CSS global da navbar/menu -->
     <link rel="stylesheet" href="css/menu.css">
+    
+    <!--
+==================================================
+PROTEÇÃO CONTRA IFRAMES (ANTI-CLICKJACKING)
+
+Objetivo:
+Impedir que a página seja carregada dentro
+de um iframe de outro website.
+
+Funcionamento:
+1. Verifica se a página está dentro de um iframe.
+2. Se estiver:
+   - Tenta redirecionar o utilizador para a página original.
+3. Caso o navegador bloqueie o redirecionamento:
+   - Substitui todo o conteúdo da página
+     por uma mensagem de bloqueio.
+
+Nota:
+No GitHub Pages não é possível configurar
+cabeçalhos HTTP como:
+- X-Frame-Options
+- Content-Security-Policy
+
+Esta solução fornece uma proteção básica
+contra clickjacking utilizando JavaScript.
+==================================================
+-->
+    <script>
+    if (window.top !== window.self) {
+
+        try {
+            window.top.location = window.location.href;
+        } catch (e) {
+
+            document.documentElement.innerHTML = `
+                <head>
+                    <title>Página bloqueada</title>
+                </head>
+                <body style="
+                    margin:0;
+                    height:100vh;
+                    display:flex;
+                    justify-content:center;
+                    align-items:center;
+                    background:#0f172a;
+                    color:#e5e7eb;
+                    font-family:Arial,sans-serif;
+                    text-align:center;
+                ">
+                    <div>
+                        <h1>🚫 Página bloqueada</h1>
+                        <p>Esta página não pode ser apresentada dentro de um iframe.</p>
+                    </div>
+                </body>
+            `;
+        }
+    }
+    </script>
+
 </head>
 
 <body>
+
+    <!-- Navbar carregada dinamicamente pelo navbar.js -->
     <div id="navbar"></div>
 
+    <!-- Cabeçalho principal da página -->
     <header class="hero">
 
-
+        <!-- Título principal com tradução automática PT/EN -->
         <h1 data-pt="👋🏻 Vamos falar?" data-en="👋🏻 Let's talk?">
             👋🏻 Vamos falar?
         </h1>
 
+        <!-- Texto introdutório da página de contacto -->
         <p data-pt="Se quiseres entrar em contacto comigo, enviar uma proposta, colaborar num projeto ou simplesmente deixar uma mensagem, usa o formulário abaixo." data-en="If you want to contact me, send a proposal, collaborate on a project or simply leave a message, use the form below.">
             Se quiseres entrar em contacto comigo, enviar uma proposta, colaborar num projeto ou simplesmente deixar uma mensagem, usa o formulário abaixo.
         </p>
+
     </header>
 
+    <!-- Conteúdo principal da página -->
     <main class="contact-container">
 
+        <!-- Grelha principal com informação pessoal e formulário -->
         <section class="contact-grid">
 
+            <!-- Cartão informativo do lado esquerdo -->
             <div class="info-card">
 
+                <!-- Título do cartão informativo -->
                 <h2 data-pt="Vamos trabalhar juntos?" data-en="Let's work together?">
                     Vamos trabalhar juntos?
                 </h2>
 
+                <!-- Texto de disponibilidade profissional -->
                 <p data-pt="Estou disponível para novos desafios, projetos técnicos, oportunidades de colaboração e iniciativas que permitam criar soluções úteis e eficientes." data-en="I am available for new challenges, technical projects, collaboration opportunities and initiatives focused on building useful and efficient solutions.">
                     Estou disponível para novos desafios, projetos técnicos, oportunidades de colaboração e iniciativas que permitam criar soluções úteis e eficientes.
                 </p>
 
+                <!-- Secção com áreas de interesse -->
                 <div class="availability-section">
 
                     <h3 data-pt="Áreas de Interesse" data-en="Areas of Interest">
                         Áreas de Interesse
                     </h3>
 
+                    <!-- Lista de áreas técnicas/profissionais -->
                     <ul class="skills-list">
                         <li>💻 Software Development</li>
                         <li>📊 Data Analytics</li>
@@ -56,7 +135,9 @@
 
                 </div>
 
+                <!-- Secção de localização e disponibilidade -->
                 <div class="availability-section">
+
                     <br>
 
                     <h3 data-pt="Localização" data-en="Location">
@@ -71,8 +152,11 @@
 
                 </div>
 
+                <!-- Secção de situação atual -->
                 <div class="availability-section">
+
                     <br>
+
                     <h3 data-pt="Atualmente" data-en="Currently">
                         Atualmente
                     </h3>
@@ -84,46 +168,64 @@
                     </ul>
 
                 </div>
+
                 <br>
+
+                <!-- Links externos e internos de contacto/perfil -->
                 <div class="contact-links">
 
+                    <!-- Link para GitHub -->
                     <a href="https://github.com/adrvalente" target="_blank">
-            💻 GitHub
-        </a>
+                        💻 GitHub
+                    </a>
 
+                    <!-- Link para LinkedIn -->
                     <a href="https://linkedin.com/in/adrvalente" target="_blank">
-            💼 LinkedIn
-        </a>
+                        💼 LinkedIn
+                    </a>
 
+                    <!-- Link interno para a página do CV -->
                     <a href="cv.html">
-            📄 Download CV
-        </a>
+                        📄 Download CV
+                    </a>
 
                 </div>
 
             </div>
 
+            <!-- Cartão do formulário de contacto -->
             <div class="form-card">
+
                 <h2 data-pt="Envia uma mensagem" data-en="Send a message">
                     Envia uma mensagem
                 </h2>
 
+                <!-- Integração do formulário Typeform -->
                 <div class="typeform-wrapper">
+
+                    <!-- ID do formulário Typeform incorporado -->
                     <div data-tf-live="01KTHC0ZB73TNBDAFJAAT6YGFP"></div>
+
+                    <!-- Script oficial do Typeform para carregar o formulário -->
                     <script src="//embed.typeform.com/next/embed.js"></script>
+
                 </div>
+
             </div>
 
         </section>
 
     </main>
 
+    <!-- Rodapé da página -->
     <footer>
         © 2026 adrvalente · GitHub Portfolio
     </footer>
 
-
+    <!-- Script responsável por carregar a navbar reutilizável -->
     <script src="js/navbar.js"></script>
+
+    <!-- Script responsável pela tradução automática PT/EN -->
     <script src="js/language.js"></script>
 
 </body>

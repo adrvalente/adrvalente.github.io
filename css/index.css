@@ -1,8 +1,19 @@
+/* ==================================================
+   INDEX.CSS
+   Página Inicial do Portfólio
+================================================== */
+
+
+/* Reset global */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+
+/* Corpo da página */
 
 body {
     min-height: 100vh;
@@ -15,11 +26,17 @@ body {
     overflow: hidden;
 }
 
+
+/* Rodapé, caso seja usado */
+
 footer {
     text-align: center;
     padding: 30px;
     color: #64748b;
 }
+
+
+/* Elementos decorativos de fundo */
 
 .background {
     position: absolute;
@@ -30,11 +47,17 @@ footer {
     z-index: -1;
 }
 
+
+/* Glow azul superior esquerdo */
+
 .bg1 {
     top: -100px;
     left: -100px;
     background: rgba(37, 99, 235, 0.35);
 }
+
+
+/* Glow azul inferior direito */
 
 .bg2 {
     bottom: -100px;
@@ -42,10 +65,16 @@ footer {
     background: rgba(56, 189, 248, 0.25);
 }
 
+
+/* Container principal */
+
 .container {
     text-align: center;
     padding: 40px 24px;
 }
+
+
+/* Imagem antiga de perfil, caso volte a ser usada */
 
 .profile-img {
     width: 135px;
@@ -58,9 +87,15 @@ footer {
     transition: 0.3s ease;
 }
 
+
+/* Hover da imagem antiga */
+
 .profile-img:hover {
     transform: scale(1.05);
 }
+
+
+/* Nome principal */
 
 h1 {
     font-size: 4rem;
@@ -69,12 +104,18 @@ h1 {
     text-shadow: 0 0 25px rgba(56, 189, 248, 0.18);
 }
 
+
+/* Textos introdutórios */
+
 p {
     font-size: 1.2rem;
     color: #cbd5e1;
     margin-bottom: 30px;
     line-height: 1.6;
 }
+
+
+/* Área dos botões antigos de navegação */
 
 .home-actions {
     display: flex;
@@ -83,6 +124,9 @@ p {
     margin-top: 30px;
     flex-wrap: wrap;
 }
+
+
+/* Botões antigos de navegação */
 
 .home-btn {
     min-width: 140px;
@@ -97,12 +141,18 @@ p {
     box-shadow: 0 0 14px rgba(37, 99, 235, 0.12);
 }
 
+
+/* Hover dos botões antigos */
+
 .home-btn:hover {
     transform: translateY(-3px);
     border-color: #38bdf8;
     color: #ffffff;
     box-shadow: 0 0 18px rgba(56, 189, 248, 0.4), 0 0 35px rgba(37, 99, 235, 0.25);
 }
+
+
+/* Botão principal de entrada */
 
 .status-btn {
     width: min(540px, 90%);
@@ -114,7 +164,7 @@ p {
     gap: 18px;
     border-radius: 999px;
     border: 1px solid rgba(56, 189, 248, 0.7);
-    background: linear-gradient( 135deg, rgba(15, 23, 42, 0.95), rgba(30, 64, 175, 0.28));
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 64, 175, 0.28));
     color: #f8fafc;
     text-decoration: none;
     font-size: 1.05rem;
@@ -123,11 +173,17 @@ p {
     transition: 0.3s ease;
 }
 
+
+/* Hover do botão principal */
+
 .status-btn:hover {
     transform: translateY(-4px);
     border-color: #38bdf8;
     box-shadow: 0 0 24px rgba(56, 189, 248, 0.65), 0 0 50px rgba(37, 99, 235, 0.35), inset 0 0 24px rgba(56, 189, 248, 0.12);
 }
+
+
+/* Ponto verde de estado */
 
 .dot {
     width: 13px;
@@ -139,15 +195,24 @@ p {
     animation: dotPulse 2s infinite;
 }
 
+
+/* Seta do botão */
+
 .arrow {
     font-size: 1.5rem;
     color: #38bdf8;
     transition: 0.3s ease;
 }
 
+
+/* Movimento da seta no hover */
+
 .status-btn:hover .arrow {
     transform: translateX(6px);
 }
+
+
+/* Container das imagens de avatar */
 
 .avatar-wrapper {
     position: relative;
@@ -155,6 +220,9 @@ p {
     height: 150px;
     margin: 0 auto 35px;
 }
+
+
+/* Estilo base dos avatares */
 
 .avatar {
     position: absolute;
@@ -168,19 +236,31 @@ p {
     transition: opacity 0.35s ease, transform 0.35s ease;
 }
 
+
+/* Imagem alternativa escondida inicialmente */
+
 .avatar-hover {
     opacity: 0;
 }
+
+
+/* Esconde avatar principal no hover */
 
 .avatar-wrapper:hover .avatar-main {
     opacity: 0;
     transform: scale(0.95);
 }
 
+
+/* Mostra avatar alternativo no hover */
+
 .avatar-wrapper:hover .avatar-hover {
     opacity: 1;
     transform: scale(1.05);
 }
+
+
+/* Animação do ponto verde */
 
 @keyframes dotPulse {
     0% {
@@ -198,15 +278,17 @@ p {
 }
 
 
-/* ==========================
+/* ==================================================
    MOBILE - INDEX
-========================== */
+================================================== */
 
 @media (max-width: 768px) {
+    /* Usa altura dinâmica em mobile */
     body {
         min-height: 100dvh;
         overflow: hidden;
     }
+    /* Centraliza o conteúdo no ecrã */
     .container {
         width: 100%;
         min-height: 100dvh;
@@ -216,27 +298,32 @@ p {
         justify-content: center;
         transform: translateY(-25px);
     }
+    /* Reduz avatar em mobile */
     .avatar {
         width: 115px;
         height: 115px;
         margin-bottom: 28px;
     }
+    /* Título responsivo */
     h1 {
         font-size: clamp(2.7rem, 11vw, 4rem);
         line-height: 1.05;
         margin-bottom: 24px;
         white-space: nowrap;
     }
+    /* Subtítulo, caso uses esta classe */
     .subtitle {
         font-size: 1.25rem;
         line-height: 1.5;
         margin-bottom: 22px;
     }
+    /* Descrição, caso uses esta classe */
     .description {
         font-size: 1.15rem;
         line-height: 1.5;
         margin-bottom: 36px;
     }
+    /* Botão principal maior em mobile */
     .enter-btn,
     .status-btn {
         width: 100%;
@@ -248,29 +335,15 @@ p {
 }
 
 
-/*@media(max-width: 768px) {
-    h1 {
-        font-size: 2.6rem;
-    }
-    p {
-        font-size: 1rem;
-    }
-    .profile-img {
-        width: 115px;
-        height: 115px;
-    }
-    .home-btn {
-        min-width: 120px;
-        padding: 11px 20px;
-    }
-    .status-btn {
-        font-size: 0.95rem;
-        padding: 14px 18px;
-    }
-}
-    */
+/* ==================================================
+   NOTA
+==================================================
 
+No teu ficheiro original havia duas chavetas finais extra:
 
 }
 
 }
+
+Foram removidas nesta versão comentada.
+================================================== */

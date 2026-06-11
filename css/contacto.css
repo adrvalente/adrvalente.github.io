@@ -1,8 +1,27 @@
+/* ==================================================
+   CONTACTO.CSS
+   Página de Contacto
+==================================================
+
+Objetivo:
+- Criar uma página de contacto moderna.
+- Apresentar informação profissional.
+- Integrar formulário Typeform.
+- Usar cards Glassmorphism.
+- Garantir boa adaptação em mobile.
+================================================== */
+
+
+/* Reset global */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+
+/* Estilo geral da página */
 
 body {
     margin: 0;
@@ -11,6 +30,9 @@ body {
     color: #e5e7eb;
 }
 
+
+/* Rodapé */
+
 footer {
     text-align: center;
     padding: 30px;
@@ -18,9 +40,12 @@ footer {
 }
 
 
-/* ==========================
+/* ==================================================
    BOTÕES
-========================== */
+================================================== */
+
+
+/* Estilo base para botões reutilizáveis */
 
 .download-btn,
 .lang-btn {
@@ -35,12 +60,18 @@ footer {
     transition: all 0.3s ease;
 }
 
+
+/* Botão de download */
+
 .download-btn {
     display: inline-block;
     padding: 13px 28px;
     border-radius: 999px;
     font-weight: bold;
 }
+
+
+/* Botão de idioma, caso seja usado diretamente na página */
 
 .lang-btn {
     position: absolute;
@@ -50,6 +81,9 @@ footer {
     border-radius: 999px;
 }
 
+
+/* Hover dos botões */
+
 .download-btn:hover,
 .lang-btn:hover {
     transform: translateY(-3px);
@@ -58,15 +92,21 @@ footer {
 }
 
 
-/* ==========================
-   HERO
-========================== */
+/* ==================================================
+   HERO SECTION
+================================================== */
+
+
+/* Cabeçalho principal da página */
 
 .hero {
     position: relative;
     text-align: center;
     padding: 145px 20px 45px;
 }
+
+
+/* Pequena etiqueta visual opcional */
 
 .tag {
     display: inline-block;
@@ -79,11 +119,17 @@ footer {
     font-size: .85rem;
 }
 
+
+/* Título principal */
+
 .hero h1 {
     font-size: clamp(2.3rem, 6vw, 4.5rem);
     color: #ffffff;
     margin-bottom: 18px;
 }
+
+
+/* Texto introdutório */
 
 .hero p {
     max-width: 760px;
@@ -96,9 +142,12 @@ footer {
 }
 
 
-/* ==========================
+/* ==================================================
    CONTACTOS
-========================== */
+================================================== */
+
+
+/* Container geral da secção de contacto */
 
 .contact-container {
     width: 90%;
@@ -107,11 +156,17 @@ footer {
     padding: 30px 0 90px;
 }
 
+
+/* Grid principal: informação à esquerda e formulário à direita */
+
 .contact-grid {
     display: grid;
     grid-template-columns: 0.85fr 1.15fr;
     gap: 28px;
 }
+
+
+/* Cards Glassmorphism */
 
 .info-card,
 .form-card {
@@ -125,12 +180,18 @@ footer {
     transition: .3s ease;
 }
 
+
+/* Efeito hover nos cards */
+
 .info-card:hover,
 .form-card:hover {
     transform: translateY(-6px);
     border-color: rgba(96, 165, 250, .45);
     box-shadow: 0 26px 70px rgba(0, 0, 0, .45);
 }
+
+
+/* Títulos dos cards */
 
 .info-card h2,
 .form-card h2 {
@@ -139,17 +200,72 @@ footer {
     font-size: 1.6rem;
 }
 
+
+/* Texto do card informativo */
+
 .info-card p {
     color: #cbd5e1;
     line-height: 1.7;
     margin-bottom: 28px;
 }
 
+
+/* ==================================================
+   ÁREAS DE INTERESSE / LOCALIZAÇÃO / ATUALMENTE
+================================================== */
+
+
+/* Secções internas do card informativo */
+
+.availability-section {
+    margin-top: 28px;
+}
+
+
+/* Título de cada secção interna */
+
+.availability-section h3 {
+    color: #ffffff;
+    font-size: 1rem;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+
+/* Lista sem bullets */
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Item de lista */
+
+.skills-list li {
+    padding: 8px 0;
+    color: #cbd5e1;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+
+/* ==================================================
+   LINKS GITHUB / LINKEDIN / CV
+================================================== */
+
+
+/* Container dos links */
+
 .contact-links {
     display: flex;
     flex-direction: column;
     gap: 14px;
 }
+
+
+/* Link individual */
 
 .contact-links a {
     display: block;
@@ -162,12 +278,23 @@ footer {
     transition: .25s ease;
 }
 
+
+/* Hover dos links */
+
 .contact-links a:hover {
     color: #ffffff;
     border-color: rgba(96, 165, 250, .55);
     background: rgba(96, 165, 250, .18);
     box-shadow: 0 0 22px rgba(96, 165, 250, .25);
 }
+
+
+/* ==================================================
+   TYPEFORM
+================================================== */
+
+
+/* Wrapper do formulário Typeform */
 
 .typeform-wrapper {
     width: 100%;
@@ -179,11 +306,15 @@ footer {
 }
 
 
-/* ==========================
+/* ==================================================
    RESPONSIVO
-========================== */
+================================================== */
+
+
+/* Tablets e ecrãs médios */
 
 @media (max-width: 850px) {
+    /* Ajustes da navbar nesta página */
     .navbar {
         flex-wrap: wrap;
         gap: 15px;
@@ -199,19 +330,26 @@ footer {
         justify-content: center;
         gap: 14px;
     }
+    /* Grid passa para uma coluna */
     .contact-grid {
         grid-template-columns: 1fr;
     }
+    /* Mais espaço para compensar navbar em mobile */
     .hero {
         padding-top: 175px;
     }
 }
 
+
+/* Telemóveis pequenos */
+
 @media (max-width: 500px) {
+    /* Cards mais compactos */
     .info-card,
     .form-card {
         padding: 24px;
     }
+    /* Dá mais altura ao formulário em mobile */
     .typeform-wrapper {
         min-height: 600px;
     }

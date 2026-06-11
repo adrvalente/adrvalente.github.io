@@ -1,43 +1,171 @@
 <!DOCTYPE html>
+<!--
+==================================================
+Página 404 (404.html)
+==================================================
+
+Objetivo:
+- Informar o utilizador que a página não existe.
+- Permitir regressar à página anterior.
+- Redirecionar para a página inicial quando não
+  existe histórico de navegação.
+
+Autor: Adriano Valente
+==================================================
+-->
+
 <html lang="pt-PT">
 
 <head>
+
+    <!-- Codificação UTF-8 -->
     <meta charset="UTF-8">
+
+    <!-- Título apresentado no navegador -->
     <title>404 | Página não encontrada</title>
+
+    <!-- Responsividade para dispositivos móveis -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- CSS global da navbar/menu -->
     <link rel="stylesheet" href="css/menu.css">
+
+    <!-- CSS específico da página de erro -->
     <link rel="stylesheet" href="css/404.css">
+    
+    <!--
+==================================================
+PROTEÇÃO CONTRA IFRAMES (ANTI-CLICKJACKING)
+
+Objetivo:
+Impedir que a página seja carregada dentro
+de um iframe de outro website.
+
+Funcionamento:
+1. Verifica se a página está dentro de um iframe.
+2. Se estiver:
+   - Tenta redirecionar o utilizador para a página original.
+3. Caso o navegador bloqueie o redirecionamento:
+   - Substitui todo o conteúdo da página
+     por uma mensagem de bloqueio.
+
+Nota:
+No GitHub Pages não é possível configurar
+cabeçalhos HTTP como:
+- X-Frame-Options
+- Content-Security-Policy
+
+Esta solução fornece uma proteção básica
+contra clickjacking utilizando JavaScript.
+==================================================
+-->
+    <script>
+    if (window.top !== window.self) {
+
+        try {
+            window.top.location = window.location.href;
+        } catch (e) {
+
+            document.documentElement.innerHTML = `
+                <head>
+                    <title>Página bloqueada</title>
+                </head>
+                <body style="
+                    margin:0;
+                    height:100vh;
+                    display:flex;
+                    justify-content:center;
+                    align-items:center;
+                    background:#0f172a;
+                    color:#e5e7eb;
+                    font-family:Arial,sans-serif;
+                    text-align:center;
+                ">
+                    <div>
+                        <h1>🚫 Página bloqueada</h1>
+                        <p>Esta página não pode ser apresentada dentro de um iframe.</p>
+                    </div>
+                </body>
+            `;
+        }
+    }
+    </script>
+
+
 </head>
 
 <body>
 
+    <!--
+    ==================================================
+    PÁGINA DE ERRO 404
+    ==================================================
+
+    Apresentada quando o utilizador tenta aceder
+    a uma página inexistente ou removida.
+    -->
 
     <main class="error-container">
 
+        <!-- Cartão central da mensagem de erro -->
         <div class="error-card">
 
-            <span class="error-code">404</span>
+            <!-- Código de erro -->
+            <span class="error-code">
+                404
+            </span>
 
-            <h1>Página não encontrada</h1>
+            <!-- Título principal -->
+            <h1>
+                Página não encontrada
+            </h1>
 
+            <!-- Mensagem explicativa -->
             <p>
                 A página que procuras pode ter sido movida, removida ou nunca existiu.
             </p>
 
+            <!-- Área dos botões de navegação -->
             <div class="buttons">
 
+                <!--
+                Botão para regressar à página anterior.
+
+                Caso exista histórico de navegação:
+                - volta para a página anterior
+
+                Caso o utilizador tenha aberto
+                diretamente esta página:
+                - redireciona para index.html
+                -->
                 <button onclick="goBack()" class="btn-secondary">
                     ↩️ Voltar Atrás
                 </button>
 
                 <script>
+                    // ==================================================
+                    // FUNÇÃO GO BACK
+                    // ==================================================
+                    //
+                    // Se existir histórico do navegador,
+                    // regressa à página anterior.
+                    //
+                    // Caso contrário,
+                    // abre a página inicial.
+                    //
+
                     function goBack() {
+
                         if (window.history.length > 1) {
+
                             window.history.back();
+
                         } else {
+
                             window.location.href = "index.html";
+
                         }
+
                     }
                 </script>
 

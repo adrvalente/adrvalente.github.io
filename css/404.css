@@ -1,22 +1,60 @@
+/* ==================================================
+   404.CSS
+   Página de Erro 404
+==================================================
+
+Objetivo:
+- Apresentar uma página de erro elegante
+  quando o utilizador tenta aceder a uma
+  página inexistente.
+- Manter a identidade visual do portfólio.
+- Ser totalmente responsiva.
+================================================== */
+
+
+/* ==================================================
+   RESET GLOBAL
+==================================================
+
+Remove margens e espaçamentos padrão
+aplicados pelos navegadores.
+*/
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
+/* ==================================================
+   BODY
+==================================================
+
+Define:
+- Fundo principal
+- Tipografia
+- Cor do texto
+- Altura mínima da página
+*/
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 35%), radial-gradient(circle at bottom right, rgba(37, 99, 235, 0.18), transparent 35%), #0f172a;
+    background: radial-gradient( circle at top left, rgba(56, 189, 248, 0.18), transparent 35%), radial-gradient( circle at bottom right, rgba(37, 99, 235, 0.18), transparent 35%), #0f172a;
     color: #e5e7eb;
     min-height: 100vh;
     overflow-x: hidden;
 }
 
 
-/* ==========================
-   CONTAINER
-========================== */
+/* ==================================================
+   CONTAINER PRINCIPAL
+==================================================
+
+Centra vertical e horizontalmente
+o cartão de erro.
+*/
 
 .error-container {
     min-height: 100vh;
@@ -27,9 +65,16 @@ body {
 }
 
 
-/* ==========================
-   CARD
-========================== */
+/* ==================================================
+   CARTÃO DE ERRO
+==================================================
+
+Card Glassmorphism com:
+- Blur
+- Transparência
+- Glow azul
+- Sombras suaves
+*/
 
 .error-card {
     max-width: 700px;
@@ -46,6 +91,15 @@ body {
     box-shadow: 0 15px 40px rgba(0, 0, 0, .25), 0 0 40px rgba(59, 130, 246, .15);
 }
 
+
+/* ==================================================
+   GLOW DE FUNDO
+==================================================
+
+Efeito luminoso subtil por trás
+do cartão.
+*/
+
 .error-card::before {
     content: "";
     position: absolute;
@@ -54,6 +108,17 @@ body {
     background: radial-gradient( circle at center, rgba(59, 130, 246, .25), transparent 70%);
     z-index: -1;
 }
+
+
+/* ==================================================
+   CÓDIGO 404
+==================================================
+
+Número principal apresentado
+na página.
+
+Utiliza gradiente azul.
+*/
 
 .error-code {
     display: block;
@@ -66,10 +131,20 @@ body {
     margin-bottom: 10px;
 }
 
+
+/* ==================================================
+   TÍTULO
+================================================== */
+
 .error-card h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
+
+
+/* ==================================================
+   TEXTO DESCRITIVO
+================================================== */
 
 .error-card p {
     color: #94a3b8;
@@ -79,9 +154,13 @@ body {
 }
 
 
-/* ==========================
-   BOTÕES
-========================== */
+/* ==================================================
+   ÁREA DOS BOTÕES
+==================================================
+
+Permite adicionar um ou mais botões
+de navegação.
+*/
 
 .buttons {
     display: flex;
@@ -89,6 +168,11 @@ body {
     gap: 15px;
     flex-wrap: wrap;
 }
+
+
+/* ==================================================
+   ESTILO BASE DOS BOTÕES
+================================================== */
 
 .btn-primary,
 .btn-secondary {
@@ -99,42 +183,38 @@ body {
     transition: .3s ease;
 }
 
+
+/* ==================================================
+   BOTÃO PRINCIPAL
+==================================================
+
+Normalmente usado para:
+- Página inicial
+- Ver projetos
+- Regressar ao portfólio
+*/
+
 .btn-primary {
     background: #2563eb;
     color: white;
 }
+
+
+/* Hover do botão principal */
 
 .btn-primary:hover {
     transform: translateY(-3px);
     box-shadow: 0 0 25px rgba(37, 99, 235, .5);
 }
 
-.btn-secondary {
-    border: 1px solid rgba(255, 255, 255, .15);
-    color: #e5e7eb;
-}
 
-.btn-secondary:hover {
-    background: rgba(255, 255, 255, .08);
-    transform: translateY(-3px);
-}
+/* ==================================================
+   BOTÃO SECUNDÁRIO
+==================================================
 
-
-/* ==========================
-   MOBILE
-========================== */
-
-@media (max-width: 768px) {
-    .error-code {
-        font-size: 5rem;
-    }
-    .error-card h1 {
-        font-size: 2rem;
-    }
-    .error-card {
-        padding: 40px 25px;
-    }
-}
+Usado para ações alternativas,
+como "Voltar Atrás".
+*/
 
 .btn-secondary {
     border: 1px solid rgba(255, 255, 255, .15);
@@ -148,7 +228,45 @@ body {
     transition: .3s ease;
 }
 
+
+/* Hover do botão secundário */
+
 .btn-secondary:hover {
     background: rgba(255, 255, 255, .08);
     transform: translateY(-3px);
 }
+
+
+/* ==================================================
+   RESPONSIVO MOBILE
+==================================================
+
+Ajusta:
+- Tamanho do código 404
+- Tamanho do título
+- Espaçamento interno do cartão
+*/
+
+@media (max-width: 768px) {
+    .error-code {
+        font-size: 5rem;
+    }
+    .error-card h1 {
+        font-size: 2rem;
+    }
+    .error-card {
+        padding: 40px 25px;
+    }
+}
+
+
+/* ==================================================
+   NOTA DE MANUTENÇÃO
+==================================================
+
+Os estilos .btn-secondary estavam
+duplicados no ficheiro original.
+
+Foram unificados nesta versão
+para facilitar manutenção futura.
+================================================== */
