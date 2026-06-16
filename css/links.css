@@ -267,37 +267,167 @@ footer {
 
 @media (max-width: 700px) {
 
+    body {
+        padding-top: 0;
+    }
+
     .landing-wrapper {
         width: 92%;
-        padding-top: 25px;
+        max-width: 100%;
+        padding: 28px 0 50px;
     }
 
     .developer-card {
-        padding: 34px 20px;
+        padding: 34px 18px 28px;
+        border-radius: 24px;
+    }
+
+    .language-switch {
+        top: 18px;
+        right: 18px;
+    }
+
+    .language-switch .lang-btn {
+        padding: 8px 12px;
+        font-size: 0.75rem;
+    }
+
+    .profile-img {
+        width: 115px;
+        height: 115px;
+    }
+
+    .status-badge {
+        margin-top: 18px;
+        font-size: 0.78rem;
+        padding: 7px 13px;
     }
 
     .developer-card h1 {
-        font-size: 2rem;
+        font-size: 2.15rem;
+        line-height: 1.15;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    .intro {
+        font-size: 0.98rem;
+        line-height: 1.55;
+        margin-top: 18px;
     }
 
     .stats-grid {
         grid-template-columns: 1fr;
+        gap: 12px;
+        margin-top: 24px;
+    }
+
+    .stat-card {
+        padding: 18px 12px;
+    }
+
+    .stat-card strong {
+        font-size: 1.45rem;
+    }
+
+    .stat-card span {
+        font-size: 0.95rem;
+    }
+
+    .links-section {
+        gap: 14px;
+    }
+
+    .link-card {
+        padding: 18px 16px;
+        border-radius: 18px;
+        gap: 14px;
+    }
+
+    .link-icon {
+        min-width: 48px;
+        height: 48px;
+        font-size: 1.45rem;
+    }
+
+    .link-card strong {
+        font-size: 1.05rem;
+    }
+
+    .link-card small {
+        font-size: 0.88rem;
+    }
+
+    .featured-section {
+        margin-top: 34px;
+    }
+
+    .featured-section h2 {
+        font-size: 1.45rem;
     }
 
     .featured-grid {
         grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .featured-card {
+        padding: 22px 18px;
+    }
+
+    .featured-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .featured-card p {
+        font-size: 0.95rem;
+    }
+
+    footer {
+        padding: 28px 20px;
+        font-size: 0.85rem;
+    }
+}
+/* ==========================
+   Responsive SMALLER
+========================== */
+@media (max-width: 420px) {
+
+    .landing-wrapper {
+        width: 94%;
+    }
+
+    .developer-card h1 {
+        font-size: 1.9rem;
+    }
+
+    .subtitle {
+        font-size: 0.92rem;
+    }
+
+    .intro {
+        font-size: 0.9rem;
+    }
+
+    .profile-img {
+        width: 105px;
+        height: 105px;
     }
 
     .link-card {
-        padding: 16px;
+        padding: 17px 14px;
     }
 
-    .link-icon {
-        min-width: 42px;
-        height: 42px;
+    .link-card small {
+        font-size: 0.82rem;
     }
 }
-
+/* ==========================
+   LANGUGAGE
+========================== */
 .language-switch {
     position: absolute;
     top: 25px;
