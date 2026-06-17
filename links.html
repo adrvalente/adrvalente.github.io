@@ -40,7 +40,10 @@
 
     <div class="profile-glow"></div>
 
-    <img src="imagens/me.png" alt="Adriano Valente" class="profile-img">
+    <img id="profileImage"
+     src="imagens/me.png"
+     alt="Adriano Valente"
+     class="profile-img">
             <div>
             <p class="status-badge" data-pt="#PROCURANDO_ESTÁGIO" data-en="#OPENTOINTERNSHIP">
                 #PROCURANDO_ESTÁGIO
@@ -189,7 +192,35 @@
     </footer>
 
     
-    <script src="js/language.js"></script>
+    <script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const profileImage = document.getElementById("profileImage");
+
+    if (!profileImage) return;
+
+    profileImage.addEventListener("mouseenter", () => {
+        profileImage.src = "imagens/me_blue.png";
+    });
+
+    profileImage.addEventListener("mouseleave", () => {
+        profileImage.src = "imagens/me.png";
+    });
+
+    profileImage.addEventListener("touchstart", () => {
+        profileImage.src = "imagens/me_blue.png";
+    });
+
+    profileImage.addEventListener("touchend", () => {
+        profileImage.src = "imagens/me.png";
+    });
+
+});
+
+</script>
+
+<script src="js/language.js"></script>
 
 </body>
 
