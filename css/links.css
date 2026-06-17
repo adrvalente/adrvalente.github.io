@@ -122,6 +122,19 @@ body {
     line-height: 1.6;
 }
 
+/* ==========================
+   LINKS
+========================== */
+.link-content {
+    flex: 1;
+}
+
+.link-arrow {
+    margin-left: auto;
+    font-size: 2rem;
+    color: #38bdf8;
+    line-height: 1;
+}
 
 /* ==========================
    STATS
