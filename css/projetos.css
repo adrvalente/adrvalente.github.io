@@ -10,15 +10,9 @@ Objetivo:
 - Manter o estilo visual do portfólio.
 ================================================== */
 
-
-/* Reset simples */
-
 * {
     box-sizing: border-box;
 }
-
-
-/* Estilo geral da página */
 
 body {
     margin: 0;
@@ -27,31 +21,19 @@ body {
     color: #e5e7eb;
 }
 
-
-/* Cabeçalho da página */
-
 header {
     text-align: center;
     padding: 50px 20px 25px;
 }
-
-
-/* Título principal */
 
 header h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
-
-/* Texto introdutório */
-
 header p {
     color: #94a3b8;
 }
-
-
-/* Container central */
 
 .container {
     max-width: 1200px;
@@ -59,17 +41,11 @@ header p {
     padding: 20px;
 }
 
-
-/* Área geral da timeline */
-
 .timeline-wrapper {
     position: relative;
     margin-top: 0;
     overflow: visible;
 }
-
-
-/* Carrossel horizontal */
 
 .timeline-carousel {
     position: relative;
@@ -83,29 +59,20 @@ header p {
     scrollbar-width: none;
 }
 
-
-/* Esconde scrollbar em Chrome/Edge/Safari */
-
 .timeline-carousel::-webkit-scrollbar {
     display: none;
 }
 
-
-/* Linha visual da timeline */
-
 .timeline-line {
     position: absolute;
     top: 66px;
-    left: 115px;
+    left: 135px;
     height: 4px;
-    width: calc((230px + 30px) * 8 - 230px);
+    width: calc((230px + 30px) * 9);
     background: linear-gradient(90deg, #2563eb, #38bdf8, #22c55e);
     border-radius: 50px;
     z-index: 0;
 }
-
-
-/* Card individual de projeto */
 
 .timeline-card {
     position: relative;
@@ -123,17 +90,11 @@ header p {
     border: 1px solid rgba(148, 163, 184, 0.15);
 }
 
-
-/* Hover do card */
-
 .timeline-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 18px 35px rgba(56, 189, 248, 0.2);
     border: 1px solid #38bdf8;
 }
-
-
-/* Ponto da timeline */
 
 .timeline-dot {
     position: absolute;
@@ -145,12 +106,11 @@ header p {
     background: #38bdf8;
     border-radius: 50%;
     border: 4px solid #0f172a;
-    box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.25), 0 0 20px rgba(56, 189, 248, 0.4);
+    box-shadow:
+        0 0 0 4px rgba(56, 189, 248, 0.25),
+        0 0 20px rgba(56, 189, 248, 0.4);
     z-index: 10;
 }
-
-
-/* Label apresentada no hover */
 
 .timeline-label {
     position: absolute;
@@ -172,9 +132,6 @@ header p {
     pointer-events: none;
 }
 
-
-/* Seta inferior da label */
-
 .timeline-label::after {
     content: "";
     position: absolute;
@@ -186,17 +143,11 @@ header p {
     border-color: #1e293b transparent transparent transparent;
 }
 
-
-/* Mostra label quando o card recebe hover */
-
 .timeline-card:hover .timeline-label {
     opacity: 1;
     visibility: visible;
     transform: translateX(-50%) translateY(0);
 }
-
-
-/* Imagem do projeto */
 
 .timeline-card img {
     max-width: 125px;
@@ -205,9 +156,6 @@ header p {
     margin-bottom: 18px;
 }
 
-
-/* Título do projeto */
-
 .timeline-card h3 {
     margin: 10px 0 0;
     color: #ffffff;
@@ -215,22 +163,15 @@ header p {
     line-height: 1.3;
 }
 
-
-/* Rodapé */
-
 footer {
     text-align: center;
     padding: 30px;
     color: #64748b;
 }
 
-
 /* ==================================================
-   MODAL DE PROJETO
+   MODAL
 ================================================== */
-
-
-/* Fundo escuro do modal */
 
 .modal {
     display: none;
@@ -243,15 +184,12 @@ footer {
     padding: 20px;
 }
 
-
-/* Caixa principal do modal */
-
 .modal-content {
     position: relative;
     background: #1e293b;
     padding: 35px 30px;
     border-radius: 22px;
-    max-width: 430px;
+    max-width: 500px;
     width: 100%;
     text-align: center;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
@@ -259,22 +197,17 @@ footer {
     animation: abrirModal 0.25s ease;
 }
 
-
-/* Animação de abertura do modal */
-
 @keyframes abrirModal {
     from {
         opacity: 0;
         transform: scale(0.92);
     }
+
     to {
         opacity: 1;
         transform: scale(1);
     }
 }
-
-
-/* Imagem apresentada no modal */
 
 .modal-content img {
     max-width: 150px;
@@ -283,24 +216,15 @@ footer {
     margin-bottom: 18px;
 }
 
-
-/* Título do modal */
-
 .modal-content h2 {
     margin: 10px 0;
     color: #ffffff;
 }
 
-
-/* Descrição do modal */
-
 .modal-content p {
     color: #cbd5e1;
     line-height: 1.5;
 }
-
-
-/* Caixa das tecnologias usadas */
 
 .modal-tech {
     margin-top: 14px;
@@ -313,31 +237,46 @@ footer {
     font-weight: 600;
 }
 
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 22px;
+}
 
-/* Botão/link do modal */
-
-.modal-content a {
-    display: inline-block;
-    margin-top: 18px;
-    padding: 10px 18px;
-    border-radius: 10px;
-    background: #2563eb;
+.modal-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 145px;
+    padding: 12px 18px;
+    border-radius: 12px;
     color: white;
     text-decoration: none;
     font-size: 0.95rem;
-    transition: background 0.2s, transform 0.2s;
+    font-weight: 700;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 
+.modal-btn.live {
+    background: #2563eb;
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+}
 
-/* Hover do botão/link */
-
-.modal-content a:hover {
+.modal-btn.live:hover {
     background: #1d4ed8;
     transform: translateY(-2px);
 }
 
+.modal-btn.github {
+    background: #374151;
+    box-shadow: 0 8px 20px rgba(17, 24, 39, 0.3);
+}
 
-/* Botão de fechar modal */
+.modal-btn.github:hover {
+    background: #111827;
+    transform: translateY(-2px);
+}
 
 .close {
     position: absolute;
@@ -348,20 +287,13 @@ footer {
     cursor: pointer;
 }
 
-
-/* Hover no botão fechar */
-
 .close:hover {
     color: #ffffff;
 }
 
-
 /* ==================================================
    INDICADORES DO CARROSSEL
 ================================================== */
-
-
-/* Setas visuais laterais */
 
 .carousel-hint {
     position: absolute;
@@ -375,35 +307,24 @@ footer {
     animation: pulse 2s infinite;
 }
 
-
-/* Seta esquerda */
-
 .carousel-hint.left {
     left: -10px;
 }
 
-
-/* Seta direita */
-
 .carousel-hint.right {
     right: -10px;
 }
-
-
-/* Animação das setas */
 
 @keyframes pulse {
     0%,
     100% {
         opacity: .3;
     }
+
     50% {
         opacity: .8;
     }
 }
-
-
-/* Gradientes laterais do carrossel */
 
 .timeline-wrapper::before,
 .timeline-wrapper::after {
@@ -416,45 +337,45 @@ footer {
     pointer-events: none;
 }
 
-
-/* Fade esquerdo */
-
 .timeline-wrapper::before {
     left: 0;
     background: linear-gradient(to right, #0f172a, transparent);
 }
-
-
-/* Fade direito */
 
 .timeline-wrapper::after {
     right: 0;
     background: linear-gradient(to left, #0f172a, transparent);
 }
 
-
 /* ==================================================
    MOBILE
 ================================================== */
 
 @media (max-width: 600px) {
-    /* Título menor em mobile */
     header h1 {
         font-size: 2rem;
     }
-    /* Cards mais estreitos */
+
     .timeline-card {
         min-width: 210px;
         max-width: 210px;
     }
-    /* Imagens menores */
+
     .timeline-card img {
         max-width: 110px;
         height: 110px;
     }
-    /* Linha ajustada ao tamanho dos cards em mobile */
+
     .timeline-line {
-        left: 105px;
-        width: calc((210px + 30px) * 8 - 210px);
+        left: 125px;
+        width: calc((210px + 30px) * 9);
+    }
+
+    .modal-buttons {
+        flex-direction: column;
+    }
+
+    .modal-btn {
+        width: 100%;
     }
 }

@@ -2,26 +2,22 @@
 <html lang="pt-PT">
 
 <head>
-    <!-- SEO -->
     <meta name="description" content="Projetos técnicos de Adriano Valente nas áreas de programação, bases de dados, ETL, Python, Java e desenvolvimento web.">
     <meta name="keywords" content="Adriano Valente, portfólio, programação, Python, Java, SQL, ETL, dados, web development">
     <meta name="author" content="Adriano Valente">
     <meta name="robots" content="index, follow">
 
-    <!-- Open Graph -->
     <meta property="og:title" content="adrianovalente.pt | Projetos">
     <meta property="og:description" content="Explora os projetos técnicos de Adriano Valente em programação, dados e desenvolvimento web.">
     <meta property="og:url" content="https://adrianovalente.pt/projetos.html">
     <meta property="og:image" content="https://adrvalente.github.io//img/preview.png">
     <meta property="og:type" content="website">
 
-    <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="adrianovalente.pt | Projetos">
     <meta name="twitter:description" content="Explora os projetos técnicos de Adriano Valente em programação, dados e desenvolvimento web.">
     <meta name="twitter:image" content="https://adrvalente.github.io//img/preview.png">
 
-    
     <meta charset="UTF-8">
 
     <title data-pt="adrianovalente.pt | Projetos" data-en="adrianovalente.pt | Projects">
@@ -32,65 +28,36 @@
 
     <link rel="stylesheet" href="css/projetos.css">
     <link rel="stylesheet" href="css/menu.css">
-    
-    <!--
-==================================================
-PROTEÇÃO CONTRA IFRAMES (ANTI-CLICKJACKING)
 
-Objetivo:
-Impedir que a página seja carregada dentro
-de um iframe de outro website.
-
-Funcionamento:
-1. Verifica se a página está dentro de um iframe.
-2. Se estiver:
-   - Tenta redirecionar o utilizador para a página original.
-3. Caso o navegador bloqueie o redirecionamento:
-   - Substitui todo o conteúdo da página
-     por uma mensagem de bloqueio.
-
-Nota:
-No GitHub Pages não é possível configurar
-cabeçalhos HTTP como:
-- X-Frame-Options
-- Content-Security-Policy
-
-Esta solução fornece uma proteção básica
-contra clickjacking utilizando JavaScript.
-==================================================
--->
     <script>
-    if (window.top !== window.self) {
-
-        try {
-            window.top.location = window.location.href;
-        } catch (e) {
-
-            document.documentElement.innerHTML = `
-                <head>
-                    <title>Página bloqueada</title>
-                </head>
-                <body style="
-                    margin:0;
-                    height:100vh;
-                    display:flex;
-                    justify-content:center;
-                    align-items:center;
-                    background:#0f172a;
-                    color:#e5e7eb;
-                    font-family:Arial,sans-serif;
-                    text-align:center;
-                ">
-                    <div>
-                        <h1>🚫 Página bloqueada</h1>
-                        <p>Esta página não pode ser apresentada dentro de um iframe.</p>
-                    </div>
-                </body>
-            `;
+        if (window.top !== window.self) {
+            try {
+                window.top.location = window.location.href;
+            } catch (e) {
+                document.documentElement.innerHTML = `
+                    <head>
+                        <title>Página bloqueada</title>
+                    </head>
+                    <body style="
+                        margin:0;
+                        height:100vh;
+                        display:flex;
+                        justify-content:center;
+                        align-items:center;
+                        background:#0f172a;
+                        color:#e5e7eb;
+                        font-family:Arial,sans-serif;
+                        text-align:center;
+                    ">
+                        <div>
+                            <h1>🚫 Página bloqueada</h1>
+                            <p>Esta página não pode ser apresentada dentro de um iframe.</p>
+                        </div>
+                    </body>
+                `;
+            }
         }
-    }
     </script>
-
 </head>
 
 <body>
@@ -102,7 +69,8 @@ contra clickjacking utilizando JavaScript.
             Projetos
         </h1>
 
-        <p data-pt="Projetos académicos, pessoais e técnicos do meu percurso em IT, QA e Programação." data-en="Academic, personal and technical projects from my journey in IT, QA and Programming.">
+        <p data-pt="Projetos académicos, pessoais e técnicos do meu percurso em IT, QA e Programação."
+           data-en="Academic, personal and technical projects from my journey in IT, QA and Programming.">
             Projetos académicos, pessoais e técnicos do meu percurso em IT, QA e Programação.
         </p>
     </header>
@@ -123,7 +91,8 @@ contra clickjacking utilizando JavaScript.
                     'Interactive web project developed as a personalized digital experience, inspired by cyberpunk aesthetics and computer terminals. The page combines visual animations, Matrix effect, typewriter animation, dynamic URL parameters and hidden Easter Eggs to create a unique emotional message.',
                     'projetos/dia_do_pai.png',
                     'HTML5 · CSS3 · JavaScript · Canvas API · Responsive Design',
-                    'https://adrval83.github.io/'
+                    'https://adrval83.github.io/',
+                    'https://github.com/adrval83/adrval83.github.io'
                 )">
                     <span class="timeline-dot">
                         <span class="timeline-label">HTML5 · CSS3 · JavaScript</span>
@@ -138,12 +107,13 @@ contra clickjacking utilizando JavaScript.
                     'Interactive web application that simulates a modern café ordering system, developed with HTML, CSS and JavaScript. It features dynamic user interactions, responsive design and a classic Snake mini-game with a voucher reward system, showcasing frontend development and client-side programming skills.',
                     'projetos/cobra-cafe.png',
                     'HTML5 · CSS3 · JavaScript',
+                    'https://adrvalente.github.io/projeto_cobra_cafe/',
                     'https://github.com/adrvalente/projeto_cobra_cafe'
                 )">
                     <span class="timeline-dot">
                         <span class="timeline-label">HTML5 · CSS3 · JavaScript</span>
                     </span>
-                    <img src="projetos/cobra-cafe.png" alt="Projeto 🐍 Cobra Café">
+                    <img src="projetos/cobra-cafe.png" alt="Projeto Cobra Café">
                     <h3>🐍 Cobra Café</h3>
                 </div>
 
@@ -153,7 +123,8 @@ contra clickjacking utilizando JavaScript.
                     'Hotel management system developed with Flask and SQLite, including room, customer, booking, invoice and calendar management.',
                     'projetos/hotel_python_palace.png',
                     'Python · Flask · SQLite · HTML · CSS',
-                    '#'
+                    'projetos/hotel-python-palace.html',
+                    'https://github.com/adrvalente'
                 )">
                     <span class="timeline-dot">
                         <span class="timeline-label">Flask · SQLite</span>
@@ -168,7 +139,8 @@ contra clickjacking utilizando JavaScript.
                     'Desktop application built with Java Swing and connected to the Hotel Python Palace SQLite database, allowing room, customer and booking management.',
                     'projetos/java_swing_dashboard.png',
                     'Java · Swing · SQLite',
-                    '#'
+                    '#',
+                    'https://github.com/adrvalente'
                 )">
                     <span class="timeline-dot">
                         <span class="timeline-label">Java · Desktop</span>
@@ -183,7 +155,8 @@ contra clickjacking utilizando JavaScript.
                     'Project for extracting, transforming and loading data from PDF invoices, with MariaDB storage and a Streamlit dashboard.',
                     'projetos/etl_faturas.png',
                     'Python · MariaDB · Streamlit · ETL',
-                    '#'
+                    '#',
+                    'https://github.com/adrvalente'
                 )">
                     <span class="timeline-dot">
                         <span class="timeline-label">Python · ETL</span>
@@ -200,7 +173,8 @@ contra clickjacking utilizando JavaScript.
                     'Academic relational database modelling project for managing tables, customers, orders, menus and food products.',
                     'projetos/restaurante_bd.png',
                     'SQL · Modelo EA · Bases de Dados',
-                    '#'
+                    '#',
+                    'https://github.com/adrvalente'
                 )">
                     <span class="timeline-dot">
                         <span class="timeline-label">SQL · BD</span>
@@ -217,7 +191,8 @@ contra clickjacking utilizando JavaScript.
                     'Parametric 3D models developed in OpenSCAD, including scarf rings, custom plaques and objects for 3D printing.',
                     'projetos/openscad_3d.png',
                     'OpenSCAD · Impressão 3D',
-                    '#'
+                    '#',
+                    'https://github.com/adrvalente'
                 )">
                     <span class="timeline-dot">
                         <span class="timeline-label">OpenSCAD · 3D</span>
@@ -234,7 +209,8 @@ contra clickjacking utilizando JavaScript.
                     'Personal website developed for GitHub Pages, presenting my profile, projects, badges and certificates.',
                     'projetos/github_portfolio.png',
                     'HTML · CSS · GitHub Pages',
-                    '#'
+                    'https://adrvalente.github.io/',
+                    'https://github.com/adrvalente/adrvalente.github.io'
                 )">
                     <span class="timeline-dot">
                         <span class="timeline-label">GitHub Pages</span>
@@ -251,7 +227,8 @@ contra clickjacking utilizando JavaScript.
                     'Horizontal timeline page used to present badges, certificates and completed training courses.',
                     'projetos/badges_page.png',
                     'HTML · CSS · JavaScript',
-                    '#'
+                    'badges.html',
+                    'https://github.com/adrvalente/adrvalente.github.io'
                 )">
                     <span class="timeline-dot">
                         <span class="timeline-label">HTML · CSS · JS</span>
@@ -268,7 +245,8 @@ contra clickjacking utilizando JavaScript.
                     'Set of exercises and projects developed during the CET in Information Systems Technologies and Programming.',
                     'projetos/cet_projetos.png',
                     'C · Java · Python · SQL',
-                    '#'
+                    '#',
+                    'https://github.com/adrvalente'
                 )">
                     <span class="timeline-dot">
                         <span class="timeline-label">CET · IEFP</span>
@@ -280,7 +258,6 @@ contra clickjacking utilizando JavaScript.
                 </div>
 
             </div>
-
         </section>
 
     </main>
@@ -299,9 +276,15 @@ contra clickjacking utilizando JavaScript.
 
             <div id="modalTech" class="modal-tech"></div>
 
-            <a id="modalLink" href="#" target="_blank" data-pt="Ver projeto" data-en="View project">
-                Ver projeto
-            </a>
+            <div class="modal-buttons">
+                <a id="modalLive" href="#" target="_blank" class="modal-btn live">
+                    🌐 Live Site
+                </a>
+
+                <a id="modalGithub" href="#" target="_blank" class="modal-btn github">
+                    💻 GitHub
+                </a>
+            </div>
         </div>
     </div>
 
@@ -310,17 +293,22 @@ contra clickjacking utilizando JavaScript.
             return navigator.language.toLowerCase().startsWith("pt") ? "pt" : "en";
         }
 
-        function openModal(title, descPt, descEn, img, tech, link) {
+        function openModal(title, descPt, descEn, img, tech, liveSite, github) {
             const lang = getCurrentLang();
 
             document.getElementById("modalTitle").innerText = title;
-
-            document.getElementById("modalDesc").innerText =
-                lang === "pt" ? descPt : descEn;
-
+            document.getElementById("modalDesc").innerText = lang === "pt" ? descPt : descEn;
             document.getElementById("modalImg").src = img;
             document.getElementById("modalTech").innerText = tech;
-            document.getElementById("modalLink").href = link;
+
+            const liveBtn = document.getElementById("modalLive");
+            const githubBtn = document.getElementById("modalGithub");
+
+            liveBtn.href = liveSite;
+            githubBtn.href = github;
+
+            liveBtn.style.display = liveSite && liveSite !== "#" ? "inline-flex" : "none";
+            githubBtn.style.display = github && github !== "#" ? "inline-flex" : "none";
 
             document.getElementById("projectModal").style.display = "flex";
         }
@@ -329,15 +317,17 @@ contra clickjacking utilizando JavaScript.
             document.getElementById("projectModal").style.display = "none";
         }
 
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             const modal = document.getElementById("projectModal");
             const carousel = document.querySelector(".timeline-carousel");
 
-            modal.addEventListener("click", function(event) {
-                if (event.target === modal) {
-                    closeModal();
-                }
-            });
+            if (modal) {
+                modal.addEventListener("click", function (event) {
+                    if (event.target === modal) {
+                        closeModal();
+                    }
+                });
+            }
 
             if (!carousel) return;
 
@@ -356,7 +346,7 @@ contra clickjacking utilizando JavaScript.
                 cancelAnimationFrame(animationFrame);
             }
 
-            carousel.addEventListener("mousemove", function(event) {
+            carousel.addEventListener("mousemove", function (event) {
                 const rect = carousel.getBoundingClientRect();
                 const mouseX = event.clientX - rect.left;
 
@@ -381,7 +371,7 @@ contra clickjacking utilizando JavaScript.
     </script>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             const navbar = document.querySelector(".navbar");
 
             if (!navbar) return;
@@ -396,5 +386,4 @@ contra clickjacking utilizando JavaScript.
     <script src="js/language.js"></script>
 
 </body>
-
 </html>
